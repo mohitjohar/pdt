@@ -64,7 +64,7 @@ const Login = () => {
 
                             <div className="form-group">
 
-                                <div className="g-recaptcha" data-sitekey="6Levr8kUAAAAAKTxeEmbxeqh4Y7ZS0Dxh6jKGoZm" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+                                <div className="g-recaptcha" data-sitekey="6LfA7MkUAAAAAB5lWa-0jCUJTyJ4Ssr4iW6wNik4" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
                                 <input className="form-control d-none" data-recaptcha="true" data-error="Please complete the Captcha"/>
                                 <div className="help-block with-errors"></div>
                             </div>
