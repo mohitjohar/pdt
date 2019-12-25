@@ -1,38 +1,43 @@
 import React, { useState } from 'react';
 import GoogleMapReact from 'google-map-react';
-
+import LeftSide from '../components/map/LeftSide'
 import location from '../img/dark-pin.svg';
-
-const Marker = ({ text }) => (
-  <div>
-    <img src={location} alt="marker" />
-  </div>
-);
+const AnyReactComponent = ({ text }) => <h1>mohit</h1>;
+// const Marker = ({ text }) => (
+//   <div>
+//     <img src={location} alt="marker" />
+//   </div>
+// );
 
 const Map = () => {
   const [center, setCenter] = useState({
-    lat: 59.95,
-    lng: 30.33
+    lat: -25.2743988,
+    lng: 133.7751312
   });
   const [zoom, setZoom] = useState(11);
   return (
-        <div className="col-sm-5 pl-0">
-      <section className="map-box">
+      <div className="row">
+          <div className="col-md-4">
+            <LeftSide/>
+          </div>
+        <div className="col-md-8">
         <div style={{ height: '100vh', width: '100%' }}>
           <GoogleMapReact
-            bootstrapURLKeys={{
-              key: '6LfA7MkUAAAAAB5lWa-0jCUJTyJ4Ssr4iW6wNik4'
-            }}
             defaultCenter={center}
-            defaultZoom={zoom}
+            defaultZoom={4}
           >
-            <Marker lat={59.955413} lng={30.337844} text="My Marker" />
+               <AnyReactComponent
+            lat={-28.107516}
+            lng={152.982235}
+            text="My Marker"
+          />
+            {/* <Marker lat={59.955413} lng={30.337844} text="My Marker" /> */}
           </GoogleMapReact>
           {/* <div className="search-field">
             <Button className="btn search-button">primary</Button>{' '}
           </div> */}
         </div>
-      </section>
+    </div>
     </div>
   );
 };

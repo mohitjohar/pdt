@@ -11,6 +11,14 @@ const Dashboard = () => {
           
           <div className="meters">
             <div className="container">
+              <div className="text-right">
+              <select className="form-control">
+              <option>---</option>
+                <option>1</option>
+                <option>2</option>
+                <option>2</option>
+              </select>
+              </div>
           <div className="row">
           <div className="col-lg-4 col-md-6">
           <ReactSpeedometer
@@ -43,6 +51,14 @@ const Dashboard = () => {
           </div>
           <hr className="spacer"/>
           <div className="container">
+          <div className="text-right">
+              <select className="form-control">
+              <option>---</option>
+                <option>1</option>
+                <option>2</option>
+                <option>2</option>
+              </select>
+              </div>
             <div className="row">
             <div className="col-lg-4 col-md-6">
             <ReactSpeedometer
