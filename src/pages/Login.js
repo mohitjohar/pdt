@@ -15,64 +15,37 @@ const Login = (p) => {
 
     <div className="row align-items-center mb-50">
       <div className="col-lg-4 col-md-6 col-sm-8 ml-auto mr-auto">
-
         <form className="form" onSubmit={handleSubmit}>
-
           <div className="card card-login mb-3">
-
             <div className="card-header card-header text-center">
-              <a className="navbar-brand" href="/"><img src="img/pdt-logo.png"/><div className="ripple-container"></div></a>
+              <img src="img/pdt-logo.png" className="card-logo" alt="logo"/>
             </div>
-
             <div className="card-body">
-
-              <div className="bmd-form-group is-filled">
-
+              <div className="bmd-form-group">
                 <div className="input-group">
-
                   <div className="input-group-prepend">
-
                     <span className="input-group-text">
-
                       <i className="material-icons">email</i>
-
                     </span>
-
                   </div>
-
                   <input type="email" name="email" className="form-control" placeholder="Email..." required=""/>
-
                 </div>
-
-                            </div>
-
-              <div className="bmd-form-group mt-3 is-filled">
-
+             </div>
+              <div className="bmd-form-group mt-3 mb-2">
                 <div className="input-group">
-
                   <div className="input-group-prepend">
-
                     <span className="input-group-text">
-
                       <i className="material-icons">lock_outline</i>
-
                     </span>
-
                   </div>
-
                   <input type="password" name="password" id="password" className="form-control" placeholder="Password..." required=""/>
-
                 </div>
-
                             </div>
-
-                            <div className="form-group">
-
+                           <div className="form-group">
                                 <div className="g-recaptcha" data-sitekey="6LfA7MkUAAAAAB5lWa-0jCUJTyJ4Ssr4iW6wNik4" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
                                 <input className="form-control d-none" data-recaptcha="true" data-error="Please complete the Captcha"/>
                                 <div className="help-block with-errors"></div>
                             </div>
-
               <div className="form-check mr-auto ml-3 mt-3 pl-0">
 
                 <label className="form-check-label">

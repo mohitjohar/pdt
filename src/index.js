@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import { Route, BrowserRouter as Router1 } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
+import './index.css';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
+import Map from './pages/Map';
 
 const routing = (
   <>
     <Router1>
       <Route exact path="/" component={Login} />
+      <Route exact path="/map" component={Map} />
       <Route exact path="/dashboard" component={Dashboard} />
       <Route exact path="/login" component={Login} />
     </Router1>

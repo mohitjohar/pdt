@@ -1,7 +1,7 @@
 import React from 'react';
+import ReactSpeedometer from 'react-d3-speedometer'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import ReactSpeedometer from "react-d3-speedometer"
 
 const Dashboard = () => {
   return (
@@ -82,25 +82,25 @@ const Dashboard = () => {
             <div className="row">
               <div className="col-md-12">
               <div className="image-slider">
-                <img src="img/slides/slide1.PNG" className="w-100"/>
-                <img src="img/slides/slide2.PNG" className="w-100"/>
-                <img src="img/slides/slide3.png" className="w-100"/>
-                <img src="img/slides/slide4.jpg" className="w-100"/>
-                <img src="img/slides/slide5.PNG" className="w-100"/>
-                <img src="img/slides/slide6.PNG" className="w-100"/>
-                <img src="img/slides/slide7.PNG" className="w-100"/>
-                <img src="img/slides/slide8.PNG" className="w-100"/>
-                <img src="img/slides/slide9.jpg" className="w-100"/>
-                <img src="img/slides/slide10.jpg" className="w-100"/>
-                <img src="img/slides/slide11.png" className="w-100"/>
-                <img src="img/slides/slide12.png" className="w-100"/>
-                <img src="img/slides/slide13.jpg" className="w-100"/>
+                <img src="img/slides/slide1.PNG" className="w-100" alt="slide"/>
+                <img src="img/slides/slide2.PNG" className="w-100" alt="slide"/>
+                <img src="img/slides/slide3.png" className="w-100" alt="slide"/>
+                <img src="img/slides/slide4.jpg" className="w-100" alt="slide"/>
+                <img src="img/slides/slide5.PNG" className="w-100" alt="slide"/>
+                <img src="img/slides/slide6.PNG" className="w-100" alt="slide"/>
+                <img src="img/slides/slide7.PNG" className="w-100" alt="slide"/>
+                <img src="img/slides/slide8.PNG" className="w-100" alt="slide"/>
+                <img src="img/slides/slide9.jpg" className="w-100" alt="slide"/>
+                <img src="img/slides/slide10.jpg" className="w-100" alt="slide"/>
+                <img src="img/slides/slide11.png" className="w-100" alt="slide"/>
+                <img src="img/slides/slide12.png" className="w-100" alt="slide"/>
+                <img src="img/slides/slide13.jpg" className="w-100" alt="slide"/>
               </div>
             </div>
           </div>
       </div>
     </div>
-    <footer class="zindex-100 navbar navbar-transparent footer2 mb-0">
+    <footer className="zindex-100 navbar navbar-transparent footer2 mb-0">
       <Footer/>
     </footer>
     </div>
