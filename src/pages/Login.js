@@ -2,7 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer'
 
-const Login = () => {
+const Login = (p) => {
+
+  const handleSubmit = () =>{
+    p.history.push('/dashboard');
+  }
 
     return (
       <div className="page-header login-page header-filter" filter-color="black" style={{backgroundImage:'url(img/loginbg.jpg)',backgroundSize:'cover',backgroundPosition:'top center',alignItems:'center'}} data-color="purple">
@@ -12,7 +16,7 @@ const Login = () => {
     <div className="row align-items-center mb-50">
       <div className="col-lg-4 col-md-6 col-sm-8 ml-auto mr-auto">
 
-        <form className="form" action="/dashboard">
+        <form className="form" onSubmit={handleSubmit}>
 
           <div className="card card-login mb-3">
 
