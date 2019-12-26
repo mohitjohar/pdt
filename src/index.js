@@ -7,12 +7,14 @@ import 'font-awesome/css/font-awesome.min.css';
 import './index.css';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
+import Inspections from './pages/Inspections';
 import Map from './pages/Map';
 
 const routing = (
   <>
     <Router1>
       <Route exact path="/" component={Login} />
+      <Route exact path="/inspections" component={Inspections} />
       <Route exact path="/map" component={Map} />
       <Route exact path="/dashboard" component={Dashboard} />
       <Route exact path="/login" component={Login} />

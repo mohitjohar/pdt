@@ -13,24 +13,24 @@ const Header = () => {
           <div className="container">
             <ul className="left-side navbar-nav">
               <li className="nav-item">
-                <Link to="/">
+                <Link to="#">
                   <img src="img/pdt-logo.png" className="logo2" alt="logo" />
                 </Link>
               </li>
             </ul>
             <ul className="navbar-nav right-side">
               <li className="nav-item">
-                <Link to="/">
+                <Link to="#">
                   <i className="fa fa-clock-o" />
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/">
+                <Link to="#">
                   <i className="fa fa-star" />
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/">
+                <Link to="/dashboard">
                   <i className="fa fa-home" />
                 </Link>
               </li>
@@ -45,8 +45,8 @@ const Header = () => {
                   <i className="fa fa-user" /> &nbsp;&nbsp; Murray McC
                 </button>
                 <div className="dropdown-menu" id="dropdownMenuButton">
-                  <Link to="/">Profile</Link>
-                  <Link to="/">Settings</Link>
+                  <Link to="#">Profile</Link>
+                  <Link to="#">Settings</Link>
                   <Link to="/login">Logout</Link>
                 </div>
               </div>
@@ -80,8 +80,8 @@ const Header = () => {
                 <i className="fa fa-user" /> &nbsp;&nbsp; Murray McC
               </button>
               <div className="dropdown-menu" id="dropdownMenuButtonm">
-                <Link to="/">Profile</Link>
-                <Link to="/">Settings</Link>
+                <Link to="#">Profile</Link>
+                <Link to="#">Settings</Link>
                 <Link to="/login">Logout</Link>
               </div>
             </div>
@@ -91,25 +91,25 @@ const Header = () => {
             >
               <ul className="navbar-nav mx-auto">
                 <li className="nav-item">
-                  <Link to="/">Inspections</Link>
+                  <Link to="/inspections">Inspections</Link>
                 </li>
                 <li className="nav-item">
                   <Link to="/map">Site Info</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/">Reports</Link>
+                  <Link to="#">Reports</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/map">Analytics</Link>
+                  <Link to="#">Analytics</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/map">
+                  <Link to="#">
                     Support &nbsp;&nbsp;
                     <i className="fa fa-phone" />
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/map">
+                  <Link to="#">
                     feedback &nbsp;&nbsp; <i className="fa fa-comment" />
                   </Link>
                 </li>

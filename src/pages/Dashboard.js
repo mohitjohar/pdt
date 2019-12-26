@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactSpeedometer from 'react-d3-speedometer';
 import Slider from 'react-slick';
 import Header from '../components/Header';
@@ -34,10 +34,97 @@ const sliderSettings = {
   // fade: true,
   lazyLoad: true,
   nextArrow: <RightArrow />,
-  prevArrow: <LeftArrow />
+  prevArrow: <LeftArrow />,
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 2,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    }
+  ]
 };
 
 const Dashboard = () => {
+  const locations = [
+    {
+      inspectionc: '40',
+      inspectionm: '70',
+      reduction: '60'
+    },
+    {
+      inspectionc: '50',
+      inspectionm: '80',
+      reduction: '20'
+    },
+    {
+      inspectionc: '20',
+      inspectionm: '0',
+      reduction: '10'
+    },
+    {
+      inspectionc: '90',
+      inspectionm: '30',
+      reduction: '80'
+    },
+    {
+      inspectionc: '35',
+      inspectionm: '90',
+      reduction: '100'
+    }
+  ];
+
+  const locations2 = [
+    {
+      inspectionc: '150',
+      inspectionm: '200',
+      reduction: '6'
+    },
+    {
+      inspectionc: '50',
+      inspectionm: '100',
+      reduction: '8'
+    },
+    {
+      inspectionc: '200',
+      inspectionm: '250',
+      reduction: '3'
+    },
+    {
+      inspectionc: '110',
+      inspectionm: '130',
+      reduction: '7'
+    },
+    {
+      inspectionc: '90',
+      inspectionm: '140',
+      reduction: '5'
+    }
+  ];
+
+  const [location, setLocation] = useState(locations[0]);
+  const [location2, setLocation2] = useState(locations2[0]);
+
+  const handelLocation = e => {
+    setLocation(locations[e]);
+  };
+  const handelLocation2 = e => {
+    setLocation2(locations2[e]);
+  };
+  console.log('Location', location);
+
   return (
     <div className="page bg-gray">
       <Header />
@@ -45,12 +132,15 @@ const Dashboard = () => {
         <div className="meters">
           <div className="container">
             <div className="text-right">
-              <select className="form-control">
-                <option>Australia</option>
-                <option>OD</option>
-                <option>Mt Arthur</option>
-                <option>WAIO</option>
-                <option>Mackay</option>
+              <select
+                className="form-control"
+                onChange={e => handelLocation(e.target.value)}
+              >
+                <option value="0">Australia</option>
+                <option value="1">OD</option>
+                <option value="2">Mt Arthur</option>
+                <option value="3">WAIO</option>
+                <option value="4">Mackay</option>
               </select>
             </div>
             <div className="row">
@@ -66,11 +156,11 @@ const Dashboard = () => {
                     'orange',
                     'green'
                   ]}
-                  value={40}
+                  value={location.inspectionc}
                   needleColor="#000"
                 />
                 <div className="heading1">
-                  <span>40</span>% Inspections Completed
+                  <span>{location.inspectionc}</span>% Inspections Completed
                 </div>
               </div>
               <div className="col-lg-4 col-md-6">
@@ -85,11 +175,11 @@ const Dashboard = () => {
                     'orange',
                     'green'
                   ]}
-                  value={70}
+                  value={location.inspectionm}
                   needleColor="#000"
                 />
                 <div className="heading1">
-                  <span>70</span>% Inspections Met Standard
+                  <span>{location.inspectionm}</span>% Inspections Met Standard
                 </div>
               </div>
               <div className="col-lg-4 col-md-6">
@@ -104,24 +194,29 @@ const Dashboard = () => {
                     'orange',
                     'green'
                   ]}
-                  value={60}
+                  value={location.reduction}
                   needleColor="#000"
                 />
                 <div className="heading1">
-                  <span>60</span>% Reduction In Rework Costing
+                  <span>{location.reduction}</span>% Reduction In Rework Costing
                 </div>
               </div>
             </div>
           </div>
+
           <hr className="spacer" />
+
           <div className="container">
             <div className="text-right">
-              <select className="form-control">
-                <option>Australia</option>
-                <option>OD</option>
-                <option>Mt Arthur</option>
-                <option>WAIO</option>
-                <option>Mackay</option>
+              <select
+                className="form-control"
+                onChange={e => handelLocation2(e.target.value)}
+              >
+                <option value="0">Australia</option>
+                <option value="1">OD</option>
+                <option value="2">Mt Arthur</option>
+                <option value="3">WAIO</option>
+                <option value="4">Mackay</option>
               </select>
             </div>
             <div className="row">
@@ -139,11 +234,12 @@ const Dashboard = () => {
                     'red',
                     'red'
                   ]}
-                  value={150}
+                  value={location2.inspectionc}
                   needleColor="#000"
                 />
                 <div className="heading1">
-                  <span>150</span># Critical Spares pending BHP Approval
+                  <span>{location.inspectionm}</span># Critical Spares pending
+                  BHP Approval
                 </div>
               </div>
               <div className="col-lg-4 col-md-6">
@@ -161,12 +257,13 @@ const Dashboard = () => {
                     'red',
                     'red'
                   ]}
-                  value={200}
+                  value={location2.inspectionm}
                   needleColor="#000"
                 />
 
                 <div className="heading1">
-                  <span>200</span># Critical Spares pending Vendor Repair
+                  <span>{location2.inspectionm}</span># Critical Spares pending
+                  Vendor Repair
                 </div>
               </div>
               <div className="col-lg-4 col-md-6">
@@ -174,11 +271,11 @@ const Dashboard = () => {
                   maxValue={10}
                   customSegmentStops={[0, 0.1, 2, 4, 6, 10]}
                   segmentColors={['green', 'orange', 'orange', 'orange', 'red']}
-                  value={6}
+                  value={location2.reduction}
                   needleColor="#000"
                 />
                 <div className="heading1">
-                  <span>6</span># Critical Spares Missing
+                  <span>{location2.reduction}</span># Critical Spares Missing
                 </div>
               </div>
             </div>

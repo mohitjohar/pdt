@@ -26,6 +26,39 @@ h5.markern {
   text-shadow: -1px 1px #fff;
 }
 
+th,
+td {
+  padding: 8px 13px;
+  font-size: 16px;
+  border-right: 1px solid #0000002b;
+  position: relative;
+}
+
+tr {
+  border: 1px solid #00000029;
+}
+th > i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  margin-top: -2px;
+}
+
+th.site-abb,
+th.equipment,
+th.inspection,
+th.document {
+  min-width: 160px;
+}
+.overflow-auto-table {
+  overflow: scroll;
+  margin: 0 -15px;
+}
+
+.min-height-500 {
+  min-height: 500px;
+}
 /* Checkbox start*/
 input[type='checkbox'] {
   height: 16px;
@@ -361,6 +394,7 @@ button.slick-next.slick-arrow::before {
 }
 .bg-blackt {
   background-color: #000 !important;
+  z-index: 9;
 }
 
 button.btn.btn-transparent.dropdown-toggle {
@@ -524,5 +558,15 @@ ul.navbar-nav.right-side {
   .slick-prev {
     left: -14px;
     z-index: 999;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer1 {
+    position: relative !important;
+  }
+  .row.align-items-center.mb-50 {
+    margin-bottom: 0px;
+    padding-top: 20px;
   }
 }
