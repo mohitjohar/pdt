@@ -3,15 +3,19 @@ import azIcon from '../../img/AZ.png';
 
 const LeftSide = ({ handelChange, handelChanges }) => {
   const [values, setValue] = useState(true);
+  const [data, setData] = useState(true);
   const handleClick = () => {
     setValue(!values);
     handelChange(values);
   };
   const handleClicks = () => {
-    setValue(!values);
-    handelChange(values);
+    setData(!data);
+    handelChanges(data);
   };
-  console.log('leftside', values);
+  const handleLocation = () => {
+
+  }
+  console.log('leftside', data);
   return (
     <div className="map-left-sidebar">
       <div className="d-flex align-item-center map-fliter">
@@ -87,7 +91,7 @@ const LeftSide = ({ handelChange, handelChanges }) => {
           </a>
         </div>
         <div className="d-inline-flex align-items-center">
-          <a href="#" className="nav-link">
+          <a href="#" className="nav-link" onClick={handleLocation}>
             <i className="fa fa-crosshairs" />
           </a>
           <a href="#" className="nav-link">
@@ -102,7 +106,7 @@ const LeftSide = ({ handelChange, handelChanges }) => {
       <div className="d-flex align-items-center map-fliter fliter3 justify-content-between">
         <div className="d-inline-flex align-items-center">
           <a href="#" className="nav-link">
-            <input type="checkbox" value={values} onClick={handleClicks} />
+            <input type="checkbox" value={data} onClick={handleClicks} />
           </a>
           <a href="#" className="nav-link">
             <i className="fa fa-square text-yellow" />
