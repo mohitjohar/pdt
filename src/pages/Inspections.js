@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Pdf from '../pdf/report.pdf';
-import AtachmentIcon from '../pdf/report.pdf';
+import AtachmentIcon from '../img/attachment.png';
 
 const Inspections = p => {
   return (
@@ -47,12 +47,14 @@ const Inspections = p => {
                 <td>Complete</td>
                 <td>
                   <a href={Pdf} target="new" title="download PDF">
-                    @202005015 Inspection Report
+                    <img src={AtachmentIcon} alt="attachmentIcon" />
+                    202005015 Inspection Report
                   </a>
                 </td>
                 <td>
                   <a href={Pdf} target="new" title="download PDF">
-                    @RGM JRA
+                    <img src={AtachmentIcon} alt="attachmentIcon" />
+                    RGM JRA
                   </a>
                 </td>
               </tr>
@@ -81,12 +83,14 @@ const Inspections = p => {
                 <td>Complete</td>
                 <td>
                   <a href={Pdf} target="new" title="download PDF">
-                    @20200501.C Inspection Report
+                    <img src={AtachmentIcon} alt="attachmentIcon" />
+                    20200501.C Inspection Report
                   </a>
                 </td>
                 <td>
                   <a href={Pdf} target="new" title="download PDF">
-                    @FSM JRA
+                    <img src={AtachmentIcon} alt="attachmentIcon" />
+                    FSM JRA
                   </a>
                 </td>
               </tr>
@@ -115,12 +119,14 @@ const Inspections = p => {
                 <td>Pending</td>
                 <td>
                   <a href={Pdf} target="new" title="download PDF">
-                    @A20200501.K Inspection Report
+                    <img src={AtachmentIcon} alt="attachmentIcon" />
+                    A20200501.K Inspection Report
                   </a>
                 </td>
                 <td>
                   <a href={Pdf} target="new" title="download PDF">
-                    @LKT JRA
+                    <img src={AtachmentIcon} alt="attachmentIcon" />
+                    LKT JRA
                   </a>
                 </td>
               </tr>

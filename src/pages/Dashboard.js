@@ -60,57 +60,57 @@ const sliderSettings = {
 const Dashboard = () => {
   const locations = [
     {
-      inspectionc: '40',
+      inspectionc: '30',
       inspectionm: '70',
       reduction: '60'
     },
     {
+      inspectionc: '45',
+      inspectionm: '75',
+      reduction: '50'
+    },
+    {
+      inspectionc: '15',
+      inspectionm: '85',
+      reduction: '70'
+    },
+    {
       inspectionc: '50',
-      inspectionm: '80',
-      reduction: '20'
-    },
-    {
-      inspectionc: '20',
-      inspectionm: '0',
-      reduction: '10'
-    },
-    {
-      inspectionc: '90',
-      inspectionm: '30',
+      inspectionm: '60',
       reduction: '80'
     },
     {
-      inspectionc: '35',
-      inspectionm: '90',
-      reduction: '100'
+      inspectionc: '60',
+      inspectionm: '60',
+      reduction: '40'
     }
   ];
 
   const locations2 = [
     {
-      inspectionc: '150',
-      inspectionm: '200',
-      reduction: '6'
+      inspectionc: '30',
+      inspectionm: '40',
+      reduction: '1'
     },
     {
-      inspectionc: '50',
-      inspectionm: '100',
-      reduction: '8'
+      inspectionc: '45',
+      inspectionm: '25',
+      reduction: '1'
     },
     {
-      inspectionc: '200',
-      inspectionm: '250',
-      reduction: '3'
+      inspectionc: '15',
+      inspectionm: '55',
+      reduction: '1'
     },
     {
-      inspectionc: '110',
-      inspectionm: '130',
-      reduction: '7'
+      inspectionc: '40',
+      inspectionm: '40',
+      reduction: '1'
     },
     {
-      inspectionc: '90',
-      inspectionm: '140',
-      reduction: '5'
+      inspectionc: '20',
+      inspectionm: '40',
+      reduction: '2'
     }
   ];
 
