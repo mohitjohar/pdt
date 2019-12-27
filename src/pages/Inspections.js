@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Pdf from '../pdf/report.pdf';
+import AtachmentIcon from '../pdf/report.pdf';
 
 const Inspections = p => {
   return (

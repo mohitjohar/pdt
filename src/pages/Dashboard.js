@@ -212,7 +212,7 @@ const Dashboard = () => {
                 className="form-control"
                 onChange={e => handelLocation2(e.target.value)}
               >
-                <option value="0">BNA</option>
+                <option value="0">BMA</option>
                 <option value="1">BMC</option>
                 <option value="2">NEC</option>
                 <option value="3">OD</option>
