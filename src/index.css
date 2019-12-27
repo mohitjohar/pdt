@@ -56,6 +56,10 @@ img[alt='attachmentIcon'] {
   max-width: 16px;
   margin-right: 10px;
 }
+img.inspectionimg {
+  max-height: 200px;
+  margin-bottom: 15px;
+}
 th,
 td {
   padding: 8px 13px;
@@ -575,6 +579,10 @@ form.maxw-500 > div {
 form.maxw-500 {
   max-width: 500px;
   margin: auto;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 3px;
+  box-shadow: 0 0 7px 1px #00000021;
 }
 
 .pdtb-150 {

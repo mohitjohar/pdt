@@ -30,21 +30,21 @@ const Inspections = p => {
               </tr>
               <tr>
                 <td
-                  onClick={() => p.history.push('/detail')}
+                  // onClick={() => p.history.push('/detail')}
                   style={{ cursor: 'pointer' }}
                   title="Click to go Detail"
                 >
                   01/05/20
                 </td>
                 <td
-                  onClick={() => p.history.push('/detail')}
+                  // onClick={() => p.history.push('/detail')}
                   style={{ cursor: 'pointer' }}
                   title="Click to go Detail"
                 >
                   OD
                 </td>
                 <td
-                  onClick={() => p.history.push('/detail')}
+                  // onClick={() => p.history.push('/detail')}
                   style={{ cursor: 'pointer' }}
                   title="Click to go Detail"
                 >
@@ -66,21 +66,21 @@ const Inspections = p => {
               </tr>
               <tr>
                 <td
-                  onClick={() => p.history.push('/detail')}
+                  // onClick={() => p.history.push('/detail')}
                   style={{ cursor: 'pointer' }}
                   title="Click to go Detail"
                 >
                   01/05/20
                 </td>
                 <td
-                  onClick={() => p.history.push('/detail')}
+                  // onClick={() => p.history.push('/detail')}
                   style={{ cursor: 'pointer' }}
                   title="Click to go Detail"
                 >
                   OD
                 </td>
                 <td
-                  onClick={() => p.history.push('/detail')}
+                  // onClick={() => p.history.push('/detail')}
                   style={{ cursor: 'pointer' }}
                   title="Click to go Detail"
                 >
@@ -102,21 +102,21 @@ const Inspections = p => {
               </tr>
               <tr>
                 <td
-                  onClick={() => p.history.push('/detail')}
+                  // onClick={() => p.history.push('/detail')}
                   style={{ cursor: 'pointer' }}
                   title="Click to go Detail"
                 >
                   01/05/20
                 </td>
                 <td
-                  onClick={() => p.history.push('/detail')}
+                  // onClick={() => p.history.push('/detail')}
                   style={{ cursor: 'pointer' }}
                   title="Click to go Detail"
                 >
                   OD
                 </td>
                 <td
-                  onClick={() => p.history.push('/detail')}
+                  // onClick={() => p.history.push('/detail')}
                   style={{ cursor: 'pointer' }}
                   title="Click to go Detail"
                 >

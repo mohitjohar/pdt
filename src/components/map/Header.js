@@ -7,7 +7,7 @@ const Header = () => {
       <nav className="navbar justify-content-between">
         <ul className="navbar-nav flex-row align-items-center">
           <li className="nav-item">
-            <a href="nav-link">
+            <a href="#">
               <img src={trackdimg} alt="trackd" />
             </a>
           </li>

@@ -83,6 +83,11 @@ const Dashboard = () => {
       inspectionc: '60',
       inspectionm: '60',
       reduction: '40'
+    },
+    {
+      inspectionc: '40',
+      inspectionm: '70',
+      reduction: '60'
     }
   ];
 
@@ -111,11 +116,16 @@ const Dashboard = () => {
       inspectionc: '20',
       inspectionm: '40',
       reduction: '2'
+    },
+    {
+      inspectionc: '150',
+      inspectionm: '200',
+      reduction: '6'
     }
   ];
 
-  const [location, setLocation] = useState(locations[0]);
-  const [location2, setLocation2] = useState(locations2[0]);
+  const [location, setLocation] = useState(locations[5]);
+  const [location2, setLocation2] = useState(locations2[5]);
 
   const handelLocation = e => {
     setLocation(locations[e]);
@@ -136,6 +146,7 @@ const Dashboard = () => {
                 className="form-control"
                 onChange={e => handelLocation(e.target.value)}
               >
+                <option value="5">Australia</option>
                 <option value="0">BMA</option>
                 <option value="1">BMC</option>
                 <option value="2">NEC</option>
@@ -212,6 +223,7 @@ const Dashboard = () => {
                 className="form-control"
                 onChange={e => handelLocation2(e.target.value)}
               >
+                <option value="5">Australia</option>
                 <option value="0">BMA</option>
                 <option value="1">BMC</option>
                 <option value="2">NEC</option>
