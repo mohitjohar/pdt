@@ -1,8 +1,9 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Pdf from '../pdf/report.pdf';
 
-const Inspections = () => {
+const Inspections = p => {
   return (
     <div className="page bg-gray">
       <Header />
@@ -21,28 +22,106 @@ const Inspections = () => {
                 <th className="document">Ruk Document</th>
               </tr>
               <tr>
-                <td>01/05/20</td>
-                <td>OD</td>
-                <td>J1589-01-00</td>
+                <td
+                  onClick={() => p.history.push('/detail')}
+                  style={{ cursor: 'pointer' }}
+                  title="Click to go Detail"
+                >
+                  01/05/20
+                </td>
+                <td
+                  onClick={() => p.history.push('/detail')}
+                  style={{ cursor: 'pointer' }}
+                  title="Click to go Detail"
+                >
+                  OD
+                </td>
+                <td
+                  onClick={() => p.history.push('/detail')}
+                  style={{ cursor: 'pointer' }}
+                  title="Click to go Detail"
+                >
+                  J1589-01-00
+                </td>
                 <td>Complete</td>
-                <td>202005015 Inspection Report</td>
-                <td>@RGM JRA</td>
+                <td>
+                  <a href={Pdf} target="new" title="download PDF">
+                    @202005015 Inspection Report
+                  </a>
+                </td>
+                <td>
+                  <a href={Pdf} target="new" title="download PDF">
+                    @RGM JRA
+                  </a>
+                </td>
               </tr>
               <tr>
-                <td>01/05/20</td>
-                <td>OD</td>
-                <td>CC 3-CC4-CSS+Spare</td>
+                <td
+                  onClick={() => p.history.push('/detail')}
+                  style={{ cursor: 'pointer' }}
+                  title="Click to go Detail"
+                >
+                  01/05/20
+                </td>
+                <td
+                  onClick={() => p.history.push('/detail')}
+                  style={{ cursor: 'pointer' }}
+                  title="Click to go Detail"
+                >
+                  OD
+                </td>
+                <td
+                  onClick={() => p.history.push('/detail')}
+                  style={{ cursor: 'pointer' }}
+                  title="Click to go Detail"
+                >
+                  CC 3-CC4-CSS+Spare
+                </td>
                 <td>Complete</td>
-                <td>20200501.C Inspection Report</td>
-                <td>@FSM JRA</td>
+                <td>
+                  <a href={Pdf} target="new" title="download PDF">
+                    @20200501.C Inspection Report
+                  </a>
+                </td>
+                <td>
+                  <a href={Pdf} target="new" title="download PDF">
+                    @FSM JRA
+                  </a>
+                </td>
               </tr>
               <tr>
-                <td>01/05/20</td>
-                <td>OD</td>
-                <td>2BF1353 Vacuum Pump</td>
+                <td
+                  onClick={() => p.history.push('/detail')}
+                  style={{ cursor: 'pointer' }}
+                  title="Click to go Detail"
+                >
+                  01/05/20
+                </td>
+                <td
+                  onClick={() => p.history.push('/detail')}
+                  style={{ cursor: 'pointer' }}
+                  title="Click to go Detail"
+                >
+                  OD
+                </td>
+                <td
+                  onClick={() => p.history.push('/detail')}
+                  style={{ cursor: 'pointer' }}
+                  title="Click to go Detail"
+                >
+                  2BF1353 Vacuum Pump
+                </td>
                 <td>Pending</td>
-                <td>20200501.K Inspection Report</td>
-                <td>@LKT JRA</td>
+                <td>
+                  <a href={Pdf} target="new" title="download PDF">
+                    @A20200501.K Inspection Report
+                  </a>
+                </td>
+                <td>
+                  <a href={Pdf} target="new" title="download PDF">
+                    @LKT JRA
+                  </a>
+                </td>
               </tr>
             </table>
           </div>

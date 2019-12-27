@@ -20,12 +20,26 @@ body {
 }
 h5.markern {
   color: #f6002d;
-  font-size: 14px;
+  font-size: 16px;
+  position: relative;
+  left: -25px;
+  font-weight: bold;
+  display: inline-block;
   text-transform: capitalize;
   letter-spacing: 0.1rem;
-  text-shadow: -1px 1px #fff;
+  text-shadow: -1px -1px #fff;
 }
-
+h5.markern:before {
+  content: '';
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #0000009c;
+  left: 50%;
+  top: -17px;
+  transform: translateX(-50%);
+  background-color: #ff00009c;
+}
 th,
 td {
   padding: 8px 13px;
@@ -44,7 +58,10 @@ th > i {
   right: 10px;
   margin-top: -2px;
 }
-
+img[alt='carsIcon'] {
+  width: 70px;
+  height: auto;
+}
 th.site-abb,
 th.equipment,
 th.inspection,
@@ -52,7 +69,7 @@ th.document {
   min-width: 160px;
 }
 .overflow-auto-table {
-  overflow: scroll;
+  overflow: auto;
   margin: 0 -15px;
 }
 
@@ -87,20 +104,23 @@ input[type='checkbox']:checked::after {
   height: 100%;
 }
 input[type='checkbox'].minus:after {
-  content: '' !important;
-  height: 2px !important;
-  top: 7px !important;
-  left: 3px !important;
-  width: 9px !important;
+  content: '\f068' !important;
+  font-family: FontAwesome;
+  top: 2px !important;
+  left: 2px !important;
   position: absolute;
   display: block;
-  background-color: #0083c8;
+  color: #6693c0;
 }
+
 input[type='checkbox'].minus:checked::before {
   background-color: #0083c8;
 }
 input[type='checkbox'].minus:checked::after {
-  background-color: #fff;
+  content: '\f067' !important;
+  color: #fff;
+  top: 3px !important;
+  left: 3px !important;
 }
 /* End Checkbox */
 
@@ -147,7 +167,8 @@ li.nav-item > a {
   display: block;
 }
 
-a:hover {
+a:hover,
+.btn-link:hover {
   text-decoration: none !important;
 }
 
@@ -286,6 +307,8 @@ input.btn.btn-secondary.btn-link.btn-lg {
 }
 .navbar-absolute.header-top {
   background-color: #0083c8;
+  position: relative;
+  z-index: 99999999;
 }
 .navbar-absolute.header-top a {
   color: #fff;
@@ -395,7 +418,6 @@ button.slick-next.slick-arrow::before {
 }
 .bg-blackt {
   background-color: #000 !important;
-  z-index: 9;
 }
 
 button.btn.btn-transparent.dropdown-toggle {
@@ -438,10 +460,6 @@ a.see-mr {
 ul.navbar-nav.right-side,
 ul.pull-right.navbar-nav.ml-auto {
   flex-direction: inherit;
-}
-
-ul.navbar-nav.right-side .dropdown {
-  padding: 7px 0px;
 }
 
 .meters hr.spacer {

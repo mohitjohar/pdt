@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Logoimg from '../img/pdt-logo.png';
 
 const Header = () => {
   // const logout = () =>{
@@ -14,7 +15,7 @@ const Header = () => {
             <ul className="left-side navbar-nav">
               <li className="nav-item">
                 <Link to="#">
-                  <img src="img/pdt-logo.png" className="logo2" alt="logo" />
+                  <img src={Logoimg} className="logo2" alt="logo" />
                 </Link>
               </li>
             </ul>
@@ -34,9 +35,9 @@ const Header = () => {
                   <i className="fa fa-home" />
                 </Link>
               </li>
-              <div className="dropdown d-none d-lg-block">
+              <div className="dropdown d-none d-lg-block nav-item">
                 <button
-                  className="btn btn-transparent dropdown-toggle"
+                  className="btn btn-transparent text-white nav-link"
                   type="button"
                   data-toggle="collapse"
                   data-target="#dropdownMenuButton"
@@ -45,10 +46,22 @@ const Header = () => {
                   <i className="fa fa-user" /> &nbsp;&nbsp; Murray McC
                 </button>
                 <div className="dropdown-menu" id="dropdownMenuButton">
-                  <Link to="#">Profile</Link>
-                  <Link to="#">Settings</Link>
-                  <Link to="/adduser">Add User</Link>
-                  <Link to="/login">Logout</Link>
+                  <Link to="#">
+                    <i className="fa fa-user" />
+                    &nbsp;&nbsp; Profile
+                  </Link>
+                  <Link to="#">
+                    <i className="fa fa-cog" />
+                    &nbsp;&nbsp; Settings
+                  </Link>
+                  <Link to="/adduser">
+                    <i className="fa fa-user-plus" />
+                    &nbsp;&nbsp; Add User
+                  </Link>
+                  <Link to="/login">
+                    <i className="fa fa-sign-out" aria-hidden="true" />
+                    &nbsp;&nbsp; Logout
+                  </Link>
                 </div>
               </div>
             </ul>
@@ -81,10 +94,22 @@ const Header = () => {
                 <i className="fa fa-user" /> &nbsp;&nbsp; Murray McC
               </button>
               <div className="dropdown-menu" id="dropdownMenuButtonm">
-                <Link to="#">Profile</Link>
-                <Link to="#">Settings</Link>
-                <Link to="/adduser">Add User</Link>
-                <Link to="/login">Logout</Link>
+                <Link to="#">
+                  <i className="fa fa-user" />
+                  &nbsp;&nbsp; Profile
+                </Link>
+                <Link to="#">
+                  <i className="fa fa-cog" />
+                  &nbsp;&nbsp; Settings
+                </Link>
+                <Link to="/adduser">
+                  <i className="fa fa-user-plus" />
+                  &nbsp;&nbsp; Add User
+                </Link>
+                <Link to="/login">
+                  <i className="fa fa-sign-out" aria-hidden="true" />
+                  &nbsp;&nbsp; Logout
+                </Link>
               </div>
             </div>
             <div

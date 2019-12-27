@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
+import Logoimg from '../img/pdt-logo.png';
 
 const Login = p => {
   const handleSubmit = () => {
@@ -25,11 +26,7 @@ const Login = p => {
             <form className="form" onSubmit={handleSubmit}>
               <div className="card card-login mb-3">
                 <div className="card-header card-header text-center">
-                  <img
-                    src="img/pdt-logo.png"
-                    className="card-logo"
-                    alt="logo"
-                  />
+                  <img src={Logoimg} className="card-logo" alt="logo" />
                 </div>
                 <div className="card-body">
                   <div className="bmd-form-group">

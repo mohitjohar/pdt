@@ -283,7 +283,7 @@ const Dashboard = () => {
         </div>
 
         <div className="container">
-          <h3 className="text-center heading-3">Recent Inspections</h3>
+          <h3 className="text-center heading-3 mt-3">Recent Inspections</h3>
           <div className="row">
             <div className="col-md-12">
               <div className="image-slider">

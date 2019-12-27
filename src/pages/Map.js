@@ -5,8 +5,19 @@ import location from '../img/dark-pin.svg';
 
 const AnyReactComponent = ({ text, value, data, names }) => (
   <div>
-    <div>{data === true ? <h5 className="markern">{text}</h5> : ''}</div>
-    <div>{value === true ? <h5 className="markern">{text}</h5> : ''}</div>
+    <div>
+      {data === true ? (
+        <h5 className="markern">
+          {text}
+          Onmi-tuf
+        </h5>
+      ) : (
+        ''
+      )}
+    </div>
+    <div>
+      {value === true ? <h5 className="markern">{text}Onmi-tuf</h5> : ''}
+    </div>
     <div>{names === true ? <h5 className="markern">{text}</h5> : ''}</div>
   </div>
 );
@@ -54,7 +65,7 @@ const Map = () => {
                 <AnyReactComponent
                   lat={data[0].lat}
                   lng={data[0].lng}
-                  text={data[0].name}
+                  text="onmi"
                   value={value}
                 />
               )}
@@ -62,7 +73,7 @@ const Map = () => {
                 <AnyReactComponent
                   lat={data[1].lat}
                   lng={data[1].lng}
-                  text={data[1].name}
+                  // text={data[1].name}
                   data={name}
                 />
               )}
