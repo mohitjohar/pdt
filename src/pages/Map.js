@@ -1,24 +1,19 @@
 import React, { useState } from 'react';
 import GoogleMapReact from 'google-map-react';
 import LeftSide from '../components/map/LeftSide';
-import location from '../img/dark-pin.svg';
+import Header from '../components/map/Header';
 
 const AnyReactComponent = ({ text, value, data, names }) => (
   <div>
-    <div>
-      {data === true ? (
-        <h5 className="markern">
-          {text}
-          Onmi-tuf
-        </h5>
-      ) : (
-        ''
-      )}
-    </div>
-    <div>
-      {value === true ? <h5 className="markern">{text}Onmi-tuf</h5> : ''}
-    </div>
+    <div>{data === true ? <h5 className="markern">{text}</h5> : ''}</div>
+    <div>{value === true ? <h5 className="markern">{text}</h5> : ''}</div>
     <div>{names === true ? <h5 className="markern">{text}</h5> : ''}</div>
+  </div>
+);
+
+const AnyReactComponent1 = () => (
+  <div>
+    <h5 className="markern1">Omni-tuff QLD</h5>
   </div>
 );
 
@@ -49,48 +44,54 @@ const Map = () => {
   };
   console.log('valuessss', name);
   return (
-    <div className="container-fluid">
-      <div className="row">
-        <div className="col-md-2 p-0 gray-bg">
-          <LeftSide
-            handelChange={handelChange}
-            handelChanges={handelChanges}
-            handleValue={handleValue}
-          />
-        </div>
-        <div className="col-md-10 p-0">
-          <div style={{ height: '100vh', width: '100%', position: 'relative' }}>
-            <GoogleMapReact defaultCenter={center} defaultZoom={5}>
-              {value && (
-                <AnyReactComponent
-                  lat={data[0].lat}
-                  lng={data[0].lng}
-                  text="onmi"
-                  value={value}
-                />
-              )}
-              {name && (
-                <AnyReactComponent
-                  lat={data[1].lat}
-                  lng={data[1].lng}
-                  // text={data[1].name}
-                  data={name}
-                />
-              )}
-              {names &&
-                data.map(item => (
+    <>
+      <Header />
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-md-2 p-0 gray-bg">
+            <LeftSide
+              handelChange={handelChange}
+              handelChanges={handelChanges}
+              handleValue={handleValue}
+            />
+          </div>
+          <div className="col-md-10 p-0">
+            <div
+              style={{ height: '100vh', width: '100%', position: 'relative' }}
+            >
+              <GoogleMapReact defaultCenter={center} defaultZoom={5}>
+                {value && (
                   <AnyReactComponent
-                    lat={item.lat}
-                    lng={item.lng}
-                    text={item.name}
-                    names={names}
+                    lat={data[0].lat}
+                    lng={data[0].lng}
+                    text={data[0].name}
+                    value={value}
                   />
-                ))}
-            </GoogleMapReact>
+                )}
+                {name && (
+                  <AnyReactComponent
+                    lat={data[1].lat}
+                    lng={data[1].lng}
+                    text={data[1].name}
+                    data={name}
+                  />
+                )}
+                {names &&
+                  data.map(item => (
+                    <AnyReactComponent
+                      lat={item.lat}
+                      lng={item.lng}
+                      text={item.name}
+                      names={names}
+                    />
+                  ))}
+                <AnyReactComponent1 lat={-25.22467} lng={152.114333} />
+              </GoogleMapReact>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

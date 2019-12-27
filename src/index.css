@@ -59,8 +59,9 @@ th > i {
   margin-top: -2px;
 }
 img[alt='carsIcon'] {
-  width: 70px;
+  width: 19px;
   height: auto;
+  transform: rotate(180deg);
 }
 th.site-abb,
 th.equipment,
@@ -76,6 +77,20 @@ th.document {
 .min-height-500 {
   min-height: 500px;
 }
+header.map-header {
+  background-color: #5c5c5c;
+  color: #fff;
+}
+
+header.map-header a {
+  color: #fff;
+  font-weight: bold;
+}
+img[alt='trackd'] {
+  max-width: 49px;
+  filter: brightness(0) invert(1);
+}
+
 /* Checkbox start*/
 input[type='checkbox'] {
   height: 16px;
