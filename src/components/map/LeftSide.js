@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import azIcon from '../../img/AZ.png';
 
-const LeftSide = ({ handelChange, handelChanges }) => {
+const LeftSide = ({ handelChange, handelChanges, handleValue }) => {
   const [values, setValue] = useState(true);
   const [data, setData] = useState(true);
+  const [name, setName] = useState(true)
   const handleClick = () => {
     setValue(!values);
     handelChange(values);
@@ -13,7 +14,8 @@ const LeftSide = ({ handelChange, handelChanges }) => {
     handelChanges(data);
   };
   const handleLocation = () => {
-
+    setName(!name);
+    handleValue(name);
   }
   console.log('leftside', data);
   return (
@@ -58,7 +60,7 @@ const LeftSide = ({ handelChange, handelChanges }) => {
             <input type="checkbox" className="minus" />
           </a>
           <a href="#" className="nav-link">
-            <input type="checkbox" />
+            <input type="checkbox" value={name} onClick={handleLocation} />
           </a>
           <a href="#" className="nav-link">
             <i className="fa fa-car text-red" />

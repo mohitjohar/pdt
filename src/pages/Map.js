@@ -3,10 +3,11 @@ import GoogleMapReact from 'google-map-react';
 import LeftSide from '../components/map/LeftSide';
 import location from '../img/dark-pin.svg';
 
-const AnyReactComponent = ({ text, value, data }) => (
+const AnyReactComponent = ({ text, value, data, names }) => (
   <div>
     <div>{data === true ? <h5 className="markern">{text}</h5> : ''}</div>
     <div>{value === true ? <h5 className="markern">{text}</h5> : ''}</div>
+    <div>{names === true ? <h5 className="markern">{text}</h5> : ''}</div>
   </div>
 );
 
@@ -23,18 +24,24 @@ const Map = () => {
 
   const [value, setValue] = useState(false);
   const [name, setName] = useState(false);
+  const [names, setNames] = useState(false);
   const handelChange = values => {
     setValue(values);
   };
   const handelChanges = (e) => {
     setName(e);
   };
+  const handleValue = (e) => {
+    // alert("value", e)
+    setNames(e);
+    console.log("value", names)
+  }
   console.log('valuessss', name);
   return (
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-2 p-0 gray-bg">
-          <LeftSide handelChange={handelChange} handelChanges={handelChanges} />
+          <LeftSide handelChange={handelChange} handelChanges={handelChanges} handleValue={handleValue} />
         </div>
         <div className="col-md-10 p-0">
           <div style={{ height: '100vh', width: '100%', position: 'relative' }}>
@@ -54,6 +61,15 @@ const Map = () => {
                   text={data[1].name}
                   data={name}
                 />
+              }
+              {
+                names &&
+                data.map(item => <AnyReactComponent
+                  lat={item.lat}
+                  lng={item.lng}
+                  text={item.name}
+                  names={names}
+                />)
               }
 
             </GoogleMapReact>
