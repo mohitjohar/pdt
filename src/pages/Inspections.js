@@ -10,6 +10,12 @@ const Inspections = p => {
       <Header />
       <div className="content min-height-500 pt-3">
         <div className="container">
+          <div className="row">
+            <div className="col-md-4">
+              <button className="btn btn-primary mb-2">Inspections</button>
+            </div>
+            <div className="col-md-8" />
+          </div>
           <div className="overflow-auto-table">
             <table className="list-table w-100">
               <tr>
@@ -20,7 +26,7 @@ const Inspections = p => {
                 <th className="equipment">Equipment Name</th>
                 <th className="status">Status</th>
                 <th className="inspection">Inspection Report</th>
-                <th className="document">Ruk Document</th>
+                <th className="document">Risk Document</th>
               </tr>
               <tr>
                 <td
@@ -42,7 +48,7 @@ const Inspections = p => {
                   style={{ cursor: 'pointer' }}
                   title="Click to go Detail"
                 >
-                  J1589-01-00
+                  J1589-01-00 Gearbox
                 </td>
                 <td>Complete</td>
                 <td>
@@ -78,7 +84,7 @@ const Inspections = p => {
                   style={{ cursor: 'pointer' }}
                   title="Click to go Detail"
                 >
-                  CC 3-CC4-CSS+Spare
+                  CC 3-CC4-CSS+Spare Drive Assembly
                 </td>
                 <td>Complete</td>
                 <td>
