@@ -4,7 +4,7 @@ import azIcon from '../../img/AZ.png';
 const LeftSide = ({ handelChange, handelChanges, handleValue }) => {
   const [values, setValue] = useState(true);
   const [data, setData] = useState(true);
-  const [name, setName] = useState(true)
+  const [name, setName] = useState(true);
   const handleClick = () => {
     setValue(!values);
     handelChange(values);
@@ -16,7 +16,7 @@ const LeftSide = ({ handelChange, handelChanges, handleValue }) => {
   const handleLocation = () => {
     setName(!name);
     handleValue(name);
-  }
+  };
   console.log('leftside', data);
   return (
     <div className="map-left-sidebar">
@@ -93,7 +93,7 @@ const LeftSide = ({ handelChange, handelChanges, handleValue }) => {
           </a>
         </div>
         <div className="d-inline-flex align-items-center">
-          <a href="#" className="nav-link" onClick={handleLocation}>
+          <a href="#" className="nav-link">
             <i className="fa fa-crosshairs" />
           </a>
           <a href="#" className="nav-link">

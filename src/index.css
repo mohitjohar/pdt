@@ -513,6 +513,20 @@ ul.navbar-nav.right-side {
   left: 0;
 }
 
+form.maxw-500 > div {
+  padding: 0 5px;
+}
+
+form.maxw-500 {
+  max-width: 500px;
+  margin: auto;
+}
+
+.pdtb-150 {
+  padding-top: 155px;
+  padding-bottom: 155px;
+}
+
 @media (max-width: 992px) {
   .row.align-items-center.mb-50 {
     margin-bottom: 135px;
@@ -563,7 +577,15 @@ ul.navbar-nav.right-side {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  .pdtb-150 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .col-xs-12 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
   .footer1 {
     position: relative !important;
   }

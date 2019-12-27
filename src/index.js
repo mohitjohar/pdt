@@ -9,11 +9,13 @@ import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import Inspections from './pages/Inspections';
 import Map from './pages/Map';
+import AddUser from './pages/AddUser';
 
 const routing = (
   <>
     <Router1>
       <Route exact path="/" component={Login} />
+      <Route exact path="/adduser" component={AddUser} />
       <Route exact path="/inspections" component={Inspections} />
       <Route exact path="/map" component={Map} />
       <Route exact path="/dashboard" component={Dashboard} />

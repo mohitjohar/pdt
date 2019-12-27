@@ -238,7 +238,7 @@ const Dashboard = () => {
                   needleColor="#000"
                 />
                 <div className="heading1">
-                  <span>{location.inspectionm}</span># Critical Spares pending
+                  <span>{location2.inspectionc}</span># Critical Spares pending
                   BHP Approval
                 </div>
               </div>

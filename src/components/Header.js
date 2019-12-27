@@ -47,6 +47,7 @@ const Header = () => {
                 <div className="dropdown-menu" id="dropdownMenuButton">
                   <Link to="#">Profile</Link>
                   <Link to="#">Settings</Link>
+                  <Link to="/adduser">Add User</Link>
                   <Link to="/login">Logout</Link>
                 </div>
               </div>
@@ -82,6 +83,7 @@ const Header = () => {
               <div className="dropdown-menu" id="dropdownMenuButtonm">
                 <Link to="#">Profile</Link>
                 <Link to="#">Settings</Link>
+                <Link to="/adduser">Add User</Link>
                 <Link to="/login">Logout</Link>
               </div>
             </div>

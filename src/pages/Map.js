@@ -28,50 +28,53 @@ const Map = () => {
   const handelChange = values => {
     setValue(values);
   };
-  const handelChanges = (e) => {
+  const handelChanges = e => {
     setName(e);
   };
-  const handleValue = (e) => {
+  const handleValue = e => {
     // alert("value", e)
     setNames(e);
-    console.log("value", names)
-  }
+    console.log('value', names);
+  };
   console.log('valuessss', name);
   return (
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-2 p-0 gray-bg">
-          <LeftSide handelChange={handelChange} handelChanges={handelChanges} handleValue={handleValue} />
+          <LeftSide
+            handelChange={handelChange}
+            handelChanges={handelChanges}
+            handleValue={handleValue}
+          />
         </div>
         <div className="col-md-10 p-0">
           <div style={{ height: '100vh', width: '100%', position: 'relative' }}>
             <GoogleMapReact defaultCenter={center} defaultZoom={5}>
-              {value &&
+              {value && (
                 <AnyReactComponent
                   lat={data[0].lat}
                   lng={data[0].lng}
                   text={data[0].name}
                   value={value}
                 />
-              }
-              {name &&
+              )}
+              {name && (
                 <AnyReactComponent
                   lat={data[1].lat}
                   lng={data[1].lng}
                   text={data[1].name}
                   data={name}
                 />
-              }
-              {
-                names &&
-                data.map(item => <AnyReactComponent
-                  lat={item.lat}
-                  lng={item.lng}
-                  text={item.name}
-                  names={names}
-                />)
-              }
-
+              )}
+              {names &&
+                data.map(item => (
+                  <AnyReactComponent
+                    lat={item.lat}
+                    lng={item.lng}
+                    text={item.name}
+                    names={names}
+                  />
+                ))}
             </GoogleMapReact>
           </div>
         </div>
