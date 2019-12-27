@@ -14,7 +14,7 @@ const Header = () => {
           <div className="container">
             <ul className="left-side navbar-nav">
               <li className="nav-item">
-                <Link to="#">
+                <Link to="/dashboard">
                   <img src={Logoimg} className="logo2" alt="logo" />
                 </Link>
               </li>
