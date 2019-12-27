@@ -26,6 +26,7 @@ h5.markern {
   font-weight: bold;
   display: inline-block;
   text-transform: capitalize;
+  margin-top: 32px;
   letter-spacing: 0.1rem;
   text-shadow: -1px -1px #fff;
 }
@@ -37,6 +38,7 @@ h5.markern:before {
   border: 1px solid #0000009c;
   left: 50%;
   top: -17px;
+  z-index: 999;
   transform: translateX(-50%);
   background-color: #ff00009c;
 }
@@ -81,7 +83,13 @@ header.map-header {
   background-color: #5c5c5c;
   color: #fff;
 }
-
+h5.markern1 {
+  display: inline-block;
+  min-width: 137px;
+  color: orange;
+  text-shadow: -1px -1px #fff;
+  font-weight: bold;
+}
 header.map-header a {
   color: #fff;
   font-weight: bold;

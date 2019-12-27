@@ -11,11 +11,7 @@ const AnyReactComponent = ({ text, value, data, names }) => (
   </div>
 );
 
-const AnyReactComponent1 = () => (
-  <div>
-    <h5 className="markern1">Omni-tuff QLD</h5>
-  </div>
-);
+const AnyReactComponent1 = () => <h5 className="markern1">Omni-tuff QLD</h5>;
 
 const Map = () => {
   const [center, setCenter] = useState({
@@ -59,7 +55,13 @@ const Map = () => {
             <div
               style={{ height: '100vh', width: '100%', position: 'relative' }}
             >
-              <GoogleMapReact defaultCenter={center} defaultZoom={5}>
+              <GoogleMapReact
+                defaultCenter={center}
+                defaultZoom={5}
+                bootstrapURLKeys={{
+                  key: 'AIzaSyB2RgWanHLf385ziPuRTY2d19hZAWVHbYs'
+                }}
+              >
                 {value && (
                   <AnyReactComponent
                     lat={data[0].lat}

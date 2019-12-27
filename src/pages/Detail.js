@@ -14,7 +14,7 @@ const AddUser = () => {
             <div className="col-md-9">
               <h1>Title</h1>
               <img src="post-img" src={Logoimg} alt="img" />
-              <div className="list">
+              <div className="detail-list">
                 <div className="d-flex justify-content-center">
                   <strong>Status</strong>
                   <div>Completed</div>
