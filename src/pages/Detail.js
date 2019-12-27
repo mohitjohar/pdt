@@ -16,24 +16,24 @@ const AddUser = () => {
               <img src="post-img" src={Logoimg} alt="img" />
               <div className="detail-list">
                 <div className="d-flex justify-content-center">
-                  <strong>Status</strong>
-                  <div>Completed</div>
+                  <strong className="w-100">Status</strong>
+                  <div className="w-100">Completed</div>
                 </div>
                 <div className="d-flex justify-content-center">
-                  <strong>Equipment Name</strong>
-                  <div>J1589-01-00</div>
+                  <strong className="w-100">Equipment Name</strong>
+                  <div className="w-100">J1589-01-00</div>
                 </div>
                 <div className="d-flex justify-content-center">
-                  <strong>Inspection Report</strong>
-                  <div>
+                  <strong className="w-100">Inspection Report</strong>
+                  <div className="w-100">
                     <a href={Pdf} target="new" title="download PDF">
                       @202005015 Inspection Report
                     </a>
                   </div>
                 </div>
                 <div className="d-flex justify-content-center">
-                  <strong>Ruk Document</strong>
-                  <div>
+                  <strong className="w-100">Ruk Document</strong>
+                  <div className="w-100">
                     <a href={Pdf} target="new" title="download PDF">
                       @RGM JRA
                     </a>
@@ -41,6 +41,16 @@ const AddUser = () => {
                 </div>
               </div>
             </div>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ex
+            mauris, egestas at turpis in, hendrerit vestibulum neque.
+            Pellentesque a auctor orci. Cras id porttitor urna, in ornare
+            turpis. Nullam vitae neque arcu. Suspendisse potenti. Sed egestas
+            vel velit ac semper. Vestibulum sodales tempus erat pellentesque
+            feugiat. Nulla laoreet justo vel venenatis euismod. Vestibulum ante
+            ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+            Curae; Sed eget condimentum lorem, vel eleifend sem. Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit.
           </div>
         </div>
       </div>
