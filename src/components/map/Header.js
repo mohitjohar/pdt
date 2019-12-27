@@ -3,7 +3,7 @@ import trackdimg from '../../img/trackd.png';
 
 const Header = () => {
   return (
-    <header className="map-header">
+    <header className="map-header d-none d-lg-block">
       <nav className="navbar justify-content-between">
         <ul className="navbar-nav flex-row align-items-center">
           <li className="nav-item">
