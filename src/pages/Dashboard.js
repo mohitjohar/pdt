@@ -136,11 +136,11 @@ const Dashboard = () => {
                 className="form-control"
                 onChange={e => handelLocation(e.target.value)}
               >
-                <option value="0">Australia</option>
-                <option value="1">OD</option>
-                <option value="2">Mt Arthur</option>
-                <option value="3">WAIO</option>
-                <option value="4">Mackay</option>
+                <option value="0">BMA</option>
+                <option value="1">BMC</option>
+                <option value="2">NEC</option>
+                <option value="3">OD</option>
+                <option value="4">WAIO</option>
               </select>
             </div>
             <div className="row">
@@ -212,8 +212,8 @@ const Dashboard = () => {
                 className="form-control"
                 onChange={e => handelLocation2(e.target.value)}
               >
-                <option value="0">DNA</option>
-                <option value="1">DNC</option>
+                <option value="0">BNA</option>
+                <option value="1">BMC</option>
                 <option value="2">NEC</option>
                 <option value="3">OD</option>
                 <option value="4">WAIO</option>
