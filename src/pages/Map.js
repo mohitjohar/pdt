@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import GoogleMapReact from 'google-map-react';
-import { Collapse, Button, CardBody, Card } from 'reactstrap';
+import { Collapse } from 'reactstrap';
 import carsIcon from '../img/cars.png';
 import azIcon from '../img/AZ.png';
 import Header from '../components/map/Header';

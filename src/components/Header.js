@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Dropdown, DropdownToggle, DropdownMenu, Collapse } from 'reactstrap';
 import Logoimg from '../img/pdt-logo.png';
 
 const Header = () => {
-  // const logout = () =>{
-  //   p.history.push('/login');
-  // }
+  // User dropdown desk
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const toggle = () => setDropdownOpen(prevState => !prevState);
+  // User dropdown mobi
+  const [dropdownOpen1, setDropdownOpen1] = useState(false);
+  const toggle1 = () => setDropdownOpen1(prevState => !prevState);
 
+  // Collapse
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle2 = () => setIsOpen(!isOpen);
   return (
     <>
       <div className="navbar-absolute header-top">
@@ -35,17 +42,19 @@ const Header = () => {
                   <i className="fa fa-home" />
                 </Link>
               </li>
-              <div className="dropdown d-none d-lg-block nav-item">
-                <button
+              <Dropdown
+                isOpen={dropdownOpen}
+                toggle={toggle}
+                className="dropdown d-none d-lg-block nav-item"
+              >
+                <DropdownToggle
+                  caret
                   className="btn btn-transparent text-white nav-link"
-                  type="button"
-                  data-toggle="collapse"
-                  data-target="#dropdownMenuButton"
-                  aria-controls="dropdownMenuButton"
                 >
                   <i className="fa fa-user" /> &nbsp;&nbsp; Murray McC
-                </button>
-                <div className="dropdown-menu" id="dropdownMenuButton">
+                </DropdownToggle>
+
+                <DropdownMenu id="dropdownMenuButton">
                   <Link to="#">
                     <i className="fa fa-user" />
                     &nbsp;&nbsp; Profile
@@ -62,38 +71,33 @@ const Header = () => {
                     <i className="fa fa-sign-out" aria-hidden="true" />
                     &nbsp;&nbsp; Logout
                   </Link>
-                </div>
-              </div>
+                </DropdownMenu>
+              </Dropdown>
             </ul>
           </div>
         </nav>
         <nav className="navbar navbar-expand-lg mb-0 bg-blackt">
           <div className="container">
-            <button
-              className="navbar-toggler pull-left"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
+            <button className="navbar-toggler pull-left" onClick={toggle2}>
               <span className="sr-only">Toggle navigation</span>
               <span className="navbar-toggler-icon icon-bar" />
               <span className="navbar-toggler-icon icon-bar" />
               <span className="navbar-toggler-icon icon-bar" />
             </button>
-            <div className="dropdown pull-right d-lg-none d-md-block">
-              <button
-                className="btn btn-transparent dropdown-toggle"
-                type="button"
-                data-toggle="collapse"
-                data-target="#dropdownMenuButtonm"
-                aria-controls="dropdownMenuButtonm"
+
+            <Dropdown
+              isOpen={dropdownOpen1}
+              toggle={toggle1}
+              className="dropdown pull-right d-lg-none d-md-block"
+            >
+              <DropdownToggle
+                caret
+                className="btn btn-transparent text-white nav-link"
               >
                 <i className="fa fa-user" /> &nbsp;&nbsp; Murray McC
-              </button>
-              <div className="dropdown-menu" id="dropdownMenuButtonm">
+              </DropdownToggle>
+
+              <DropdownMenu id="dropdownMenuButtonm">
                 <Link to="#">
                   <i className="fa fa-user" />
                   &nbsp;&nbsp; Profile
@@ -110,9 +114,11 @@ const Header = () => {
                   <i className="fa fa-sign-out" aria-hidden="true" />
                   &nbsp;&nbsp; Logout
                 </Link>
-              </div>
-            </div>
-            <div
+              </DropdownMenu>
+            </Dropdown>
+
+            <Collapse
+              isOpen={isOpen}
               className="collapse navbar-collapse justify-content-end"
               id="navbarSupportedContent"
             >
@@ -141,7 +147,7 @@ const Header = () => {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </Collapse>
           </div>
         </nav>
       </div>

@@ -94,6 +94,11 @@ th.document {
   margin: 0 -15px;
 }
 
+.nav-link.dropdown-toggle {
+  padding: 10px !important;
+  font-weight: 600;
+}
+
 .min-height-500 {
   min-height: 500px;
 }
@@ -461,14 +466,10 @@ button.slick-next.slick-arrow::before {
   background-color: #000 !important;
 }
 
-button.btn.btn-transparent.dropdown-toggle {
-  background-color: transparent;
-  box-shadow: none;
-  font-weight: 600;
-  font-size: 15px;
-  color: #fff;
-  padding: 0;
-  text-transform: inherit;
+button.btn.btn-transparent {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
 }
 
 .navbar .navbar-toggler .navbar-toggler-icon {
