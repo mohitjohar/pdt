@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import InspectionModel from '../components/InspectionModel';
 import Pdf from '../pdf/report.pdf';
-import AtachmentIcon from '../img/attachment.png';
+import InspectionItem from '../components/InspectionItem';
 
-const className = 'Model';
 const Inspection = [
   {
     Date: '01/05/20',
@@ -40,9 +38,6 @@ const Inspection = [
 ];
 
 const Inspections = p => {
-  const [modal, setModal] = useState(false);
-  const toggle = () => setModal(!modal);
-
   return (
     <div className="page bg-gray">
       <Header />
@@ -70,66 +65,7 @@ const Inspections = p => {
               {Inspection.map((item, i) => {
                 return (
                   <>
-                    <tr>
-                      <td
-                        onClick={toggle}
-                        style={{ cursor: 'pointer' }}
-                        title="Click here"
-                      >
-                        {item.Date}
-                      </td>
-                      <td
-                        onClick={toggle}
-                        style={{ cursor: 'pointer' }}
-                        title="Click here"
-                      >
-                        {item.SiteAbb}
-                      </td>
-                      <td
-                        onClick={toggle}
-                        style={{ cursor: 'pointer' }}
-                        title="Click here"
-                      >
-                        {item.Equipment}
-                      </td>
-                      <td>{item.Status}</td>
-                      <td>
-                        <a
-                          href={item.ReportL}
-                          target="new"
-                          title="download PDF"
-                        >
-                          <img src={AtachmentIcon} alt="attachmentIcon" />
-                          {item.Report}
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href={item.DocumentL}
-                          target="new"
-                          title="download PDF"
-                        >
-                          <img src={AtachmentIcon} alt="attachmentIcon" />
-                          {item.Document}
-                        </a>
-                      </td>
-                    </tr>
-
-                    {/* Model Start */}
-                    <InspectionModel
-                      Date={item.Date}
-                      SiteAbb={item.SiteAbb}
-                      Equipment={item.Equipment}
-                      Status={item.Status}
-                      Report={item.Report}
-                      ReportL={item.ReportL}
-                      Document={item.Document}
-                      DocumentL={item.DocumentL}
-                      className={className + i}
-                      modal={modal}
-                      toggle={toggle}
-                    />
-                    {/* Model end */}
+                    <InspectionItem item={item} i={i} />
                   </>
                 );
               })}

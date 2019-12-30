@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import Pdf from '../pdf/report.pdf';
 import AtachmentIcon from '../img/attachment.png';
 
 const InspectionModel = item => {
