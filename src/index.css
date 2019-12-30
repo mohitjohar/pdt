@@ -354,7 +354,7 @@ input.btn.btn-secondary.btn-link.btn-lg {
 .navbar-absolute.header-top {
   background-color: #0083c8;
   position: relative;
-  z-index: 99999999;
+  z-index: 1020;
 }
 .navbar-absolute.header-top a {
   color: #fff;
@@ -455,6 +455,33 @@ button.slick-prev.slick-arrow:before {
 
 button.slick-next.slick-arrow::before {
   content: '\f054';
+}
+
+h5.modal-title {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+}
+
+.modal-body .detail-list {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.modal-body .detail-list > .d-flex > strong.w-100 {
+  width: 200px !important;
+  color: #0083c8;
+  position: relative;
+}
+.modal-body .detail-list > .d-flex > strong.w-100::before {
+  content: ':';
+  position: absolute;
+  right: 0;
+  top: 9px;
+}
+.modal-body .detail-list > .d-flex > .w-100 {
+  border-color: #0083c8;
 }
 
 .footer2 a {

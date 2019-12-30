@@ -22,6 +22,14 @@ const AddUser = () => {
               />
               <div className="detail-list">
                 <div className="d-flex justify-content-center">
+                  <strong className="w-100">Date</strong>
+                  <div className="w-100">01/05/20</div>
+                </div>
+                <div className="d-flex justify-content-center">
+                  <strong className="w-100">Site Abbreviation</strong>
+                  <div className="w-100">OD</div>
+                </div>
+                <div className="d-flex justify-content-center">
                   <strong className="w-100">Status</strong>
                   <div className="w-100">Completed</div>
                 </div>
@@ -39,7 +47,7 @@ const AddUser = () => {
                   </div>
                 </div>
                 <div className="d-flex justify-content-center">
-                  <strong className="w-100">Ruk Document</strong>
+                  <strong className="w-100">Risk Document</strong>
                   <div className="w-100">
                     <a href={Pdf} target="new" title="download PDF">
                       <img src={AtachmentIcon} alt="attachmentIcon" />
