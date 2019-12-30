@@ -8,12 +8,28 @@ const AddUser = () => {
   const [lname, setLname] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  const [phonee, setPhonee] = useState(false);
   const [department, setDepartment] = useState('');
   const [employeeId, setEmployeeId] = useState('');
   const [role, setRole] = useState('');
 
-  const HendleSubmit = () => {
+  const handleSubmit = () => {
+    if (phone.length != 10) {
+      alert('Enter valid Phone Nunmber');
+      setPhonee(true);
+      return false;
+    }
+    setPhonee(false);
     alert('Your Username and Password have been sent to your email');
+  };
+
+  const Handlechange = e => {
+    setPhone(e.target.value);
+    if (phone.length != 10) {
+      setPhonee(true);
+    } else {
+      setPhonee(false);
+    }
   };
 
   console.log('department', department, 'role', role);
@@ -25,8 +41,8 @@ const AddUser = () => {
         <div className="container">
           <form
             className="row maxw-500"
-            onSubmit={HendleSubmit}
-            action="/adduser"
+            action="javascript:simpleCart.checkout()"
+            onSubmit={handleSubmit}
           >
             <div className="col-12">
               <h4 className="text-center text-primary font-weight-normal">
@@ -77,9 +93,11 @@ const AddUser = () => {
                 <input
                   type="number"
                   className={phone ? 'form-control' : 'form-control unfilled'}
+                  invalid={phonee ? 'true' : 'false'}
                   placeholder="Phone"
                   value={phone}
-                  onChange={e => setPhone(e.target.value)}
+                  // pattern="[0-9]{10}"
+                  onChange={e => Handlechange(e)}
                   required
                 />
               </div>

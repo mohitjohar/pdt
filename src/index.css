@@ -253,7 +253,8 @@ form.form .form-control {
   border: 0;
 }
 
-.form-control:invalid {
+.form-control:invalid,
+input[invalid='true'] {
   background-image: linear-gradient(
       to top,
       #f44336 2px,
