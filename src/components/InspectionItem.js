@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import InspectionModal from './InspectionModel';
+import InspectionModal from './InspectionModal';
 import AtachmentIcon from '../img/attachment.png';
 
 const InspectionItem = ({ item, i }) => {

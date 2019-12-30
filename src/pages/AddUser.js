@@ -1,14 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const AddUser = () => {
+  const [fname, setFname] = useState('');
+  const [lname, setLname] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [department, setDepartment] = useState('');
+  const [employeeId, setEmployeeId] = useState('');
+  const [role, setRole] = useState('');
+
+  const HendleSubmit = () => {
+    alert('Your Username and Password have been sent to your email');
+  };
+
+  console.log('department', department, 'role', role);
+
   return (
     <>
       <Header />
       <div className="content gray-bg pdtb-150">
         <div className="container">
-          <form className="row maxw-500">
+          <form
+            className="row maxw-500"
+            onSubmit={HendleSubmit}
+            action="/adduser"
+          >
             <div className="col-12">
               <h4 className="text-center text-primary font-weight-normal">
                 Add User
@@ -23,8 +42,11 @@ const AddUser = () => {
                 </div>
                 <input
                   type="text"
-                  className="form-control"
+                  className={fname ? 'form-control' : 'form-control unfilled'}
                   placeholder="First Name"
+                  value={fname}
+                  onChange={e => setFname(e.target.value)}
+                  required
                 />
               </div>
             </div>
@@ -37,8 +59,11 @@ const AddUser = () => {
                 </div>
                 <input
                   type="text"
-                  className="form-control"
+                  className={lname ? 'form-control' : 'form-control unfilled'}
                   placeholder="Last Name"
+                  value={lname}
+                  onChange={e => setLname(e.target.value)}
+                  required
                 />
               </div>
             </div>
@@ -51,8 +76,11 @@ const AddUser = () => {
                 </div>
                 <input
                   type="number"
-                  className="form-control"
+                  className={phone ? 'form-control' : 'form-control unfilled'}
                   placeholder="Phone"
+                  value={phone}
+                  onChange={e => setPhone(e.target.value)}
+                  required
                 />
               </div>
             </div>
@@ -65,8 +93,11 @@ const AddUser = () => {
                 </div>
                 <input
                   type="email"
-                  className="form-control"
+                  className={email ? 'form-control' : 'form-control unfilled'}
                   placeholder="Email"
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}
+                  required
                 />
               </div>
             </div>
@@ -74,31 +105,37 @@ const AddUser = () => {
               <div className="input-group mb-2">
                 <div className="input-group-prepend">
                   <span className="input-group-text">
-                    <i className="fa fa-fa-orgchart" />
+                    <i className="fa fa-building" />
                   </span>
                 </div>
                 <select
-                  type="date"
                   className="form-control"
                   placeholder="Department"
+                  onChange={e => setDepartment(e.target.value)}
+                  required
                 >
-                  <option>A</option>
-                  <option>B</option>
-                  <option>C</option>
+                  <option value="a">A</option>
+                  <option value="b">B</option>
+                  <option value="c">C</option>
                 </select>
               </div>
             </div>
-            <div className="col-12 col-xs-12">
+            <div className="col-6 col-xs-12">
               <div className="input-group mb-2">
                 <div className="input-group-prepend">
                   <span className="input-group-text">
-                    <i className="fa fa-key" />
+                    <i className="fa fa-id-card" />
                   </span>
                 </div>
                 <input
                   type="text"
-                  className="form-control"
+                  className={
+                    employeeId ? 'form-control' : 'form-control unfilled'
+                  }
                   placeholder="Employee ID"
+                  value={employeeId}
+                  onChange={e => setEmployeeId(e.target.value)}
+                  required
                 />
               </div>
             </div>
@@ -106,48 +143,23 @@ const AddUser = () => {
               <div className="input-group mb-2">
                 <div className="input-group-prepend">
                   <span className="input-group-text">
-                    <i className="fa fa-key" />
+                    <i className="fa fa-user-circle" />
                   </span>
                 </div>
-                <input
-                  type="password"
+                <select
                   className="form-control"
-                  placeholder="Password"
-                />
-              </div>
-            </div>
-            <div className="col-6 col-xs-12">
-              <div className="input-group mb-2">
-                <div className="input-group-prepend">
-                  <span className="input-group-text">
-                    <i className="fa fa-key" />
-                  </span>
-                </div>
-                <input
-                  type="password"
-                  className="form-control"
-                  placeholder="Confirm Password"
-                />
+                  placeholder="Role"
+                  onChange={e => setRole(e.target.value)}
+                  required
+                >
+                  <option value="admin">Admin</option>
+                  <option value="sub-admin">Sub-Admin</option>
+                  <option value="inspector">Inspector</option>
+                </select>
               </div>
             </div>
             <div className="col-12 text-right">
-              <div className="form-group mt-3">
-                <div
-                  className="g-recaptcha"
-                  data-sitekey="6LfA7MkUAAAAAB5lWa-0jCUJTyJ4Ssr4iW6wNik4"
-                  data-callback="verifyRecaptchaCallback"
-                  data-expired-callback="expiredRecaptchaCallback"
-                />
-                <input
-                  className="form-control d-none"
-                  data-recaptcha="true"
-                  data-error="Please complete the Captcha"
-                />
-                <div className="help-block with-errors" />
-              </div>
-            </div>
-            <div className="col-12 text-right">
-              <input type="submit" className="btn btn-primary" required />
+              <input type="submit" className="btn btn-primary" />
             </div>
           </form>
         </div>

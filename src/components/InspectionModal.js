@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import AtachmentIcon from '../img/attachment.png';
 
-const InspectionModel = item => {
+const InspectionModal = item => {
   return (
     <>
       <Modal
@@ -58,4 +58,4 @@ const InspectionModel = item => {
     </>
   );
 };
-export default InspectionModel;
+export default InspectionModal;

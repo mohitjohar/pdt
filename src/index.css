@@ -272,6 +272,10 @@ form.form .form-control {
     linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
 }
 
+input.form-control.unfilled {
+  background-image: none !important;
+}
+
 .form-check .form-check-label {
   cursor: pointer;
   padding-left: 25px;
