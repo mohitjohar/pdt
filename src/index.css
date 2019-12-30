@@ -405,6 +405,10 @@ img.logo1 {
   padding: 15px !important;
 }
 
+.image-slider .slick-dots {
+  bottom: -36px;
+}
+
 .image-slider img.w-100 {
   width: 100%;
   height: 200px;
@@ -530,11 +534,6 @@ a.see-mr {
   text-align: center;
   font-weight: bold;
 }
-
-.mobimap {
-  height: 300px !important;
-}
-
 ul.navbar-nav.right-side,
 ul.pull-right.navbar-nav.ml-auto {
   flex-direction: inherit;
