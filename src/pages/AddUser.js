@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -37,7 +36,7 @@ const AddUser = () => {
   return (
     <>
       <Header />
-      <div className="content gray-bg pdtb-150">
+      <div className="content gray-bg pdtb-100">
         <div className="container">
           <form
             className="row maxw-500"
@@ -129,9 +128,13 @@ const AddUser = () => {
                 <select
                   className="form-control"
                   placeholder="Department"
+                  className={
+                    department ? 'form-control' : 'form-control unfilled'
+                  }
                   onChange={e => setDepartment(e.target.value)}
                   required
                 >
+                  <option value="">Department</option>
                   <option value="a">A</option>
                   <option value="b">B</option>
                   <option value="c">C</option>
@@ -168,8 +171,10 @@ const AddUser = () => {
                   className="form-control"
                   placeholder="Role"
                   onChange={e => setRole(e.target.value)}
+                  className={role ? 'form-control' : 'form-control unfilled'}
                   required
                 >
+                  <option value="">Role</option>
                   <option value="admin">Admin</option>
                   <option value="sub-admin">Sub-Admin</option>
                   <option value="inspector">Inspector</option>
@@ -177,7 +182,7 @@ const AddUser = () => {
               </div>
             </div>
             <div className="col-12 text-right">
-              <input type="submit" className="btn btn-primary" />
+              <input type="submit" className="btn btn-primary mt-3" />
             </div>
           </form>
         </div>
