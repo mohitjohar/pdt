@@ -273,7 +273,8 @@ input[invalid='true'] {
     linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
 }
 
-input.form-control.unfilled {
+input.form-control.unfilled,
+select.form-control.unfilled {
   background-image: none !important;
 }
 
