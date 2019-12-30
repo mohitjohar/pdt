@@ -11,7 +11,12 @@ const AddUser = () => {
   const [department, setDepartment] = useState('');
   const [employeeId, setEmployeeId] = useState('');
   const [role, setRole] = useState('');
-
+  if (phone.length > 10) {
+    setPhonee(true);
+    alert('Enter valid Phone Nunmber');
+    setPhone('');
+    return false;
+  }
   const handleSubmit = () => {
     if (phone.length != 10) {
       alert('Enter valid Phone Nunmber');
@@ -20,15 +25,6 @@ const AddUser = () => {
     }
     setPhonee(false);
     alert('Your Username and Password have been sent to your email');
-  };
-
-  const Handlechange = e => {
-    setPhone(e.target.value);
-    if (phone.length != 10) {
-      setPhonee(true);
-    } else {
-      setPhonee(false);
-    }
   };
 
   console.log('department', department, 'role', role);
@@ -95,8 +91,7 @@ const AddUser = () => {
                   invalid={phonee ? 'true' : 'false'}
                   placeholder="Phone"
                   value={phone}
-                  // pattern="[0-9]{10}"
-                  onChange={e => Handlechange(e)}
+                  onChange={e => setPhone(e.target.value)}
                   required
                 />
               </div>
