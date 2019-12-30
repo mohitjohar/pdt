@@ -183,6 +183,7 @@ const Map = () => {
           <div className="col-md-10 p-0">
             <div
               style={{ height: '100vh', width: '100%', position: 'relative' }}
+              className="mobimap"
             >
               <GoogleMapReact
                 options={function(maps) {

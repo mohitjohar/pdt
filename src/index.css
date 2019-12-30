@@ -531,6 +531,10 @@ a.see-mr {
   font-weight: bold;
 }
 
+.mobimap {
+  height: 300px !important;
+}
+
 ul.navbar-nav.right-side,
 ul.pull-right.navbar-nav.ml-auto {
   flex-direction: inherit;
@@ -683,6 +687,10 @@ form.maxw-500 {
 }
 
 @media (max-width: 767px) {
+  .modal-dialog {
+    padding: 15px;
+    margin: 50px auto;
+  }
   .pdtb-150 {
     padding-top: 20px;
     padding-bottom: 20px;
