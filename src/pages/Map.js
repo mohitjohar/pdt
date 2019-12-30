@@ -33,8 +33,15 @@ const Map = () => {
     { lat: '-25.224670', lng: '152.114333', name: 'asset1' },
     { lat: '-28.107516', lng: '152.982235', name: 'asset2' }
   ]);
+
+  // Parent Div
+  const [isOpenP, setIsOpenP] = useState(true);
+  const toggleP = () => setIsOpenP(!isOpenP);
+
+  // Child Div
   const [isOpen, setIsOpen] = useState(true);
   const toggle = () => setIsOpen(!isOpen);
+
   const [value, setValue] = useState(false);
   const [name, setName] = useState(false);
   const [names, setNames] = useState(false);
@@ -68,7 +75,11 @@ const Map = () => {
               <div className="d-flex align-items-center map-fliter filter1 justify-content-between">
                 <div className="d-inline-flex align-items-center">
                   <a href="#" className="nav-link">
-                    <input type="checkbox" className="minus" />
+                    <input
+                      type="checkbox"
+                      className="minus"
+                      onClick={toggleP}
+                    />
                   </a>
                   <a href="#" className="nav-link">
                     <input type="checkbox" />
@@ -89,57 +100,31 @@ const Map = () => {
                   </a>
                 </div>
               </div>
-
-              <div className="d-flex align-items-center map-fliter fliter2 justify-content-between">
-                <div className="d-inline-flex align-items-center">
-                  <a href="#" className="nav-link">
-                    <input type="checkbox" className="minus" onClick={toggle} />
-                  </a>
-                  <a href="#" className="nav-link">
-                    <input
-                      type="checkbox"
-                      checked={value}
-                      onChange={setAllChange}
-                    />
-                  </a>
-                  <a href="#" className="nav-link">
-                    <img src={carsIcon} alt="carsIcon" />
-                  </a>
-                  <a href="#" className="nav-link">
-                    All units
-                  </a>
-                </div>
-                <div className="d-inline-flex align-items-center">
-                  <a href="#" className="nav-link">
-                    <i className="fa fa-chevron-circle-down" />
-                  </a>
-                  <a href="#" className="nav-link">
-                    <i className="fa fa-times" />
-                  </a>
-                </div>
-              </div>
-
-              <Collapse isOpen={isOpen}>
-                <div className="d-flex align-items-center map-fliter fliter3 justify-content-between">
+              <Collapse isOpen={isOpenP}>
+                <div className="d-flex align-items-center map-fliter fliter2 justify-content-between">
                   <div className="d-inline-flex align-items-center">
                     <a href="#" className="nav-link">
                       <input
                         type="checkbox"
-                        checked={name}
-                        onChange={() => setName(!name)}
+                        className="minus"
+                        onClick={toggle}
                       />
                     </a>
                     <a href="#" className="nav-link">
-                      <i className="fa fa-square text-yellow" />
+                      <input
+                        type="checkbox"
+                        checked={value}
+                        onChange={setAllChange}
+                      />
                     </a>
                     <a href="#" className="nav-link">
-                      Asset 1
+                      <img src={carsIcon} alt="carsIcon" />
+                    </a>
+                    <a href="#" className="nav-link">
+                      All units
                     </a>
                   </div>
                   <div className="d-inline-flex align-items-center">
-                    <a href="#" className="nav-link">
-                      <i className="fa fa-crosshairs" />
-                    </a>
                     <a href="#" className="nav-link">
                       <i className="fa fa-chevron-circle-down" />
                     </a>
@@ -149,34 +134,65 @@ const Map = () => {
                   </div>
                 </div>
 
-                <div className="d-flex align-items-center map-fliter fliter3 justify-content-between">
-                  <div className="d-inline-flex align-items-center">
-                    <a href="#" className="nav-link">
-                      <input
-                        type="checkbox"
-                        checked={names}
-                        onChange={() => setNames(!names)}
-                      />
-                    </a>
-                    <a href="#" className="nav-link">
-                      <i className="fa fa-square text-yellow" />
-                    </a>
-                    <a href="#" className="nav-link">
-                      Asset 2
-                    </a>
+                <Collapse isOpen={isOpen}>
+                  <div className="d-flex align-items-center map-fliter fliter3 justify-content-between">
+                    <div className="d-inline-flex align-items-center">
+                      <a href="#" className="nav-link">
+                        <input
+                          type="checkbox"
+                          checked={name}
+                          onChange={() => setName(!name)}
+                        />
+                      </a>
+                      <a href="#" className="nav-link">
+                        <i className="fa fa-square text-yellow" />
+                      </a>
+                      <a href="#" className="nav-link">
+                        Asset 1
+                      </a>
+                    </div>
+                    <div className="d-inline-flex align-items-center">
+                      <a href="#" className="nav-link">
+                        <i className="fa fa-crosshairs" />
+                      </a>
+                      <a href="#" className="nav-link">
+                        <i className="fa fa-chevron-circle-down" />
+                      </a>
+                      <a href="#" className="nav-link">
+                        <i className="fa fa-times" />
+                      </a>
+                    </div>
                   </div>
-                  <div className="d-inline-flex align-items-center">
-                    <a href="#" className="nav-link">
-                      <i className="fa fa-crosshairs" />
-                    </a>
-                    <a href="#" className="nav-link">
-                      <i className="fa fa-chevron-circle-down" />
-                    </a>
-                    <a href="#" className="nav-link">
-                      <i className="fa fa-times" />
-                    </a>
+
+                  <div className="d-flex align-items-center map-fliter fliter3 justify-content-between">
+                    <div className="d-inline-flex align-items-center">
+                      <a href="#" className="nav-link">
+                        <input
+                          type="checkbox"
+                          checked={names}
+                          onChange={() => setNames(!names)}
+                        />
+                      </a>
+                      <a href="#" className="nav-link">
+                        <i className="fa fa-square text-yellow" />
+                      </a>
+                      <a href="#" className="nav-link">
+                        Asset 2
+                      </a>
+                    </div>
+                    <div className="d-inline-flex align-items-center">
+                      <a href="#" className="nav-link">
+                        <i className="fa fa-crosshairs" />
+                      </a>
+                      <a href="#" className="nav-link">
+                        <i className="fa fa-chevron-circle-down" />
+                      </a>
+                      <a href="#" className="nav-link">
+                        <i className="fa fa-times" />
+                      </a>
+                    </div>
                   </div>
-                </div>
+                </Collapse>
               </Collapse>
             </div>
           </div>
