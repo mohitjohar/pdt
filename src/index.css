@@ -150,7 +150,7 @@ input[type='checkbox']:checked::after {
   height: 100%;
 }
 input[type='checkbox'].minus:after {
-  content: '\f068' !important;
+  content: '\f067' !important;
   font-family: FontAwesome;
   top: 2px !important;
   left: 2px !important;
@@ -163,7 +163,7 @@ input[type='checkbox'].minus:checked::before {
   background-color: #0083c8;
 }
 input[type='checkbox'].minus:checked::after {
-  content: '\f067' !important;
+  content: '\f068' !important;
   color: #fff;
   top: 3px !important;
   left: 3px !important;

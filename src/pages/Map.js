@@ -39,7 +39,7 @@ const Map = () => {
   const toggleP = () => setIsOpenP(!isOpenP);
 
   // Child Div
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
   const [value, setValue] = useState(false);
@@ -79,6 +79,7 @@ const Map = () => {
                       type="checkbox"
                       className="minus"
                       onClick={toggleP}
+                      checked={isOpenP}
                     />
                   </a>
                   <a href="#" className="nav-link">
@@ -108,6 +109,7 @@ const Map = () => {
                         type="checkbox"
                         className="minus"
                         onClick={toggle}
+                        checked={isOpen}
                       />
                     </a>
                     <a href="#" className="nav-link">
