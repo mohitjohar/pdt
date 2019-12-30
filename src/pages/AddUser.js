@@ -46,6 +46,20 @@ const AddUser = () => {
               <div className="input-group mb-2">
                 <div className="input-group-prepend">
                   <span className="input-group-text">
+                    <i className="fa fa-phone" />
+                  </span>
+                </div>
+                <input
+                  type="number"
+                  className="form-control"
+                  placeholder="Phone"
+                />
+              </div>
+            </div>
+            <div className="col-6 col-xs-12">
+              <div className="input-group mb-2">
+                <div className="input-group-prepend">
+                  <span className="input-group-text">
                     <i className="fa fa-envelope" />
                   </span>
                 </div>
@@ -56,17 +70,35 @@ const AddUser = () => {
                 />
               </div>
             </div>
-            <div className="col-6 col-xs-12">
+            <div className="col-12 col-xs-12">
               <div className="input-group mb-2">
                 <div className="input-group-prepend">
                   <span className="input-group-text">
-                    <i className="fa fa-phone" />
+                    <i className="fa fa-fa-orgchart" />
+                  </span>
+                </div>
+                <select
+                  type="date"
+                  className="form-control"
+                  placeholder="Department"
+                >
+                  <option>A</option>
+                  <option>B</option>
+                  <option>C</option>
+                </select>
+              </div>
+            </div>
+            <div className="col-12 col-xs-12">
+              <div className="input-group mb-2">
+                <div className="input-group-prepend">
+                  <span className="input-group-text">
+                    <i className="fa fa-key" />
                   </span>
                 </div>
                 <input
-                  type="number"
+                  type="text"
                   className="form-control"
-                  placeholder="Phone"
+                  placeholder="Employee ID"
                 />
               </div>
             </div>
@@ -99,7 +131,23 @@ const AddUser = () => {
               </div>
             </div>
             <div className="col-12 text-right">
-              <input type="submit" className="btn btn-primary mt-3" required />
+              <div className="form-group mt-3">
+                <div
+                  className="g-recaptcha"
+                  data-sitekey="6LfA7MkUAAAAAB5lWa-0jCUJTyJ4Ssr4iW6wNik4"
+                  data-callback="verifyRecaptchaCallback"
+                  data-expired-callback="expiredRecaptchaCallback"
+                />
+                <input
+                  className="form-control d-none"
+                  data-recaptcha="true"
+                  data-error="Please complete the Captcha"
+                />
+                <div className="help-block with-errors" />
+              </div>
+            </div>
+            <div className="col-12 text-right">
+              <input type="submit" className="btn btn-primary" required />
             </div>
           </form>
         </div>

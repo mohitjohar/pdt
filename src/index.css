@@ -546,6 +546,10 @@ text.current-value {
   visibility: hidden;
 }
 
+.g-recaptcha > div {
+  margin: auto;
+}
+
 .recaptcha-checkbox-border {
   height: 18px !important;
   width: 18px !important;
@@ -565,6 +569,10 @@ text.current-value {
 
 .collapse.show {
   display: block !important;
+}
+
+.modal-dialog {
+  margin: 9.75rem auto;
 }
 
 div#dropdownMenuButtonm {
