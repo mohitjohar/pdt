@@ -14,7 +14,7 @@ const Inspection = [
     SiteAbb: 'OD',
     EquipmentID: 'J1589-01-00',
     Equipment: 'Gearbox',
-    Status: 'Complete',
+    Status: 'Completed',
     Report: '202005015 Inspection Report',
     ReportL: Pdf,
     Document: 'RGM JRA',
@@ -25,7 +25,7 @@ const Inspection = [
     SiteAbb: 'OD',
     EquipmentID: 'CC 3-CC4-CSS',
     Equipment: 'Spare Drive Assembly',
-    Status: 'Complete',
+    Status: 'Completed',
     Report: '20200501.C Inspection Report',
     ReportL: Pdf,
     Document: 'FSM JRA',
@@ -106,7 +106,7 @@ const Inspections = p => {
                     <label>Status</label>
                     <select className="form-control mb-3">
                       <option value="0">All</option>
-                      <option value="1">Complete</option>
+                      <option value="1">Completed</option>
                       <option value="2">Pending</option>
                     </select>
                   </div>

@@ -17,7 +17,7 @@ import AddUser from './pages/AddUser';
 const routing = (
   <>
     <Router1>
-      <Route exact path="/" component={Login} />
+      <Route exact path="/" component={Dashboard} />
       <Route exact path="/adduser" component={AddUser} />
       <Route exact path="/inspections" component={Inspections} />
       <Route exact path="/map" component={Map} />

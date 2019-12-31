@@ -5,7 +5,7 @@ import Logoimg from '../img/pdt-logo.png';
 
 const Login = p => {
   if (localStorage.token) {
-    p.history.push('/dashboard');
+    p.history.push();
   }
   // fields
   const [email, setEmail] = useState('');
@@ -37,9 +37,10 @@ const Login = p => {
           if (res.token) {
             localStorage.setItem('token', res.token);
             console.log('token:', res.token);
-            p.history.push('/dashboard');
-            window.location.reload();
+            p.history.push('/');
             alert('Login Successfully');
+          } else {
+            alert('Enter valid Email or Password');
           }
         });
     } catch (error) {
@@ -86,7 +87,7 @@ const Login = p => {
                         onChange={e => setEmail(e.target.value)}
                         className="form-control"
                         placeholder="Email..."
-                        required=""
+                        required
                       />
                     </div>
                   </div>
@@ -105,7 +106,7 @@ const Login = p => {
                         placeholder="Password..."
                         value={password}
                         onChange={e => setPassword(e.target.value)}
-                        required=""
+                        required
                       />
                     </div>
                   </div>
