@@ -176,10 +176,14 @@ const Map = p => {
                     />
                   </a>
                   <a href="#" className="nav-link">
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onClick={toggleP}
+                      checked={isOpenP}
+                    />
                   </a>
                   <a href="#" className="nav-link">
-                    <img src={azIcon} alt="az-icon" />
+                    <img src={azIcon} alt="az-icon" onClick={toggleP} />
                   </a>
                 </div>
                 <div className="d-inline-flex align-items-center">
@@ -215,15 +219,13 @@ const Map = p => {
                         onClick={setAllChange}
                       />
                     </a>
-                    <a href="#" className="nav-link">
+                    <a href onClick={toggle} className="nav-link">
                       <img
                         src={engineimg}
                         alt="engine-icon"
                         className="black"
                       />
-                    </a>
-                    <a href="#" className="nav-link">
-                      All units
+                      &nbsp;&nbsp;All units
                     </a>
                   </div>
                   <div className="d-inline-flex align-items-center">
@@ -231,7 +233,10 @@ const Map = p => {
                       <i className="fa fa-chevron-circle-down" />
                     </a>
                     <a href="#" className="nav-link">
-                      <i className="fa fa-times" />
+                      <i
+                        className="fa fa-times"
+                        onClick={() => setIsOpenP(false)}
+                      />
                     </a>
                   </div>
                 </div>

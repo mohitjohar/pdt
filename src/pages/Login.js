@@ -20,8 +20,8 @@ const Login = p => {
 
     const url = 'https://reqres.in/api/login';
     const data = {
-      email:"eve.holt@reqres.in",
-      password: "pestol"
+      email: 'eve.holt@reqres.in',
+      password: 'pestol'
     };
 
     try {
@@ -134,7 +134,7 @@ const Login = p => {
                         cheked={remember}
                         onClick={() => setRemember(!remember)}
                       />
-                      Remember me
+                      &nbsp;&nbsp; Remember me
                       <span className="form-check-sign">
                         <span className="check" />
                       </span>
