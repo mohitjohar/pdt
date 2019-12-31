@@ -254,7 +254,11 @@ const Map = p => {
                       <a href="#" className="nav-link">
                         <i className="fa fa-square text-yellow" />
                       </a>
-                      <a href="#" className="nav-link">
+                      <a
+                        href="#"
+                        className="nav-link"
+                        onClick={() => setMap(data1[1])}
+                      >
                         {data1[1].name}
                       </a>
                     </div>
@@ -286,7 +290,11 @@ const Map = p => {
                       <a href="#" className="nav-link">
                         <i className="fa fa-square text-yellow" />
                       </a>
-                      <a href="#" className="nav-link">
+                      <a
+                        href="#"
+                        className="nav-link"
+                        onClick={() => setMap(data1[2])}
+                      >
                         {data1[2].name}
                       </a>
                     </div>
@@ -319,7 +327,11 @@ const Map = p => {
                       <a href="#" className="nav-link">
                         <i className="fa fa-square text-yellow" />
                       </a>
-                      <a href="#" className="nav-link">
+                      <a
+                        href="#"
+                        className="nav-link"
+                        onClick={() => setMap(data1[3])}
+                      >
                         {data1[3].name}
                       </a>
                     </div>
@@ -352,7 +364,11 @@ const Map = p => {
                       <a href="#" className="nav-link">
                         <i className="fa fa-square text-yellow" />
                       </a>
-                      <a href="#" className="nav-link">
+                      <a
+                        href="#"
+                        className="nav-link"
+                        onClick={() => setMap(data1[4])}
+                      >
                         {data1[4].name}
                       </a>
                     </div>
@@ -385,7 +401,11 @@ const Map = p => {
                       <a href="#" className="nav-link">
                         <i className="fa fa-square text-yellow" />
                       </a>
-                      <a href="#" className="nav-link">
+                      <a
+                        href="#"
+                        className="nav-link"
+                        onClick={() => setMap(data1[5])}
+                      >
                         {data1[5].name}
                       </a>
                     </div>
@@ -418,7 +438,11 @@ const Map = p => {
                       <a href="#" className="nav-link">
                         <i className="fa fa-square text-yellow" />
                       </a>
-                      <a href="#" className="nav-link">
+                      <a
+                        href="#"
+                        className="nav-link"
+                        onClick={() => setMap(data1[6])}
+                      >
                         {data1[6].name}
                       </a>
                     </div>
@@ -451,7 +475,11 @@ const Map = p => {
                       <a href="#" className="nav-link">
                         <i className="fa fa-square text-yellow" />
                       </a>
-                      <a href="#" className="nav-link">
+                      <a
+                        href="#"
+                        className="nav-link"
+                        onClick={() => setMap(data1[7])}
+                      >
                         {data1[7].name}
                       </a>
                     </div>
@@ -484,7 +512,11 @@ const Map = p => {
                       <a href="#" className="nav-link">
                         <i className="fa fa-square text-yellow" />
                       </a>
-                      <a href="#" className="nav-link">
+                      <a
+                        href="#"
+                        className="nav-link"
+                        onClick={() => setMap(data1[8])}
+                      >
                         {data1[8].name}
                       </a>
                     </div>
