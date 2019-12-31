@@ -20,8 +20,8 @@ const Login = p => {
 
     const url = 'https://reqres.in/api/login';
     const data = {
-      email,
-      password
+      email:"eve.holt@reqres.in",
+      password: "pestol"
     };
 
     try {
