@@ -1,13 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Logoimg from '../img/pdt-logo.png';
 
 const Login = p => {
-  const handleSubmit = () => {
+  if (localStorage.token) {
     p.history.push('/dashboard');
-  };
+  }
+  // fields
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [remember, setRemember] = useState('');
 
+  const handleSubmit = () => {
+    if (!remember) {
+      alert('Please Fill out Remember field');
+      return false;
+    }
+
+    const url = 'https://reqres.in/api/login';
+    const data = {
+      email,
+      password
+    };
+
+    try {
+      fetch(url, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+        .then(res => res.json())
+        .then(res => {
+          if (res.token) {
+            localStorage.setItem('token', res.token);
+            console.log('token:', res.token);
+            p.history.push('/dashboard');
+            window.location.reload();
+            alert('Login Successfully');
+          }
+        });
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+  console.log('email', email, 'password', password);
   return (
     <div
       className="page-header login-page header-filter"
@@ -23,7 +62,11 @@ const Login = p => {
       <div className="container" style={{ height: 'auto', zIndex: '9999' }}>
         <div className="row align-items-center mb-50">
           <div className="col-lg-4 col-md-6 col-sm-8 ml-auto mr-auto">
-            <form className="form" onSubmit={handleSubmit}>
+            <form
+              className="form"
+              onSubmit={handleSubmit}
+              action="javascript:simpleCart.checkout()"
+            >
               <div className="card card-login mb-3">
                 <div className="card-header card-header text-center">
                   <img src={Logoimg} className="card-logo" alt="logo" />
@@ -39,6 +82,8 @@ const Login = p => {
                       <input
                         type="email"
                         name="email"
+                        value={email}
+                        onChange={e => setEmail(e.target.value)}
                         className="form-control"
                         placeholder="Email..."
                         required=""
@@ -58,6 +103,8 @@ const Login = p => {
                         id="password"
                         className="form-control"
                         placeholder="Password..."
+                        value={password}
+                        onChange={e => setPassword(e.target.value)}
                         required=""
                       />
                     </div>
@@ -82,7 +129,10 @@ const Login = p => {
                         className="form-check-input invisible"
                         type="checkbox"
                         name="remember"
-                      />{' '}
+                        required=""
+                        cheked={remember}
+                        onClick={() => setRemember(!remember)}
+                      />
                       Remember me
                       <span className="form-check-sign">
                         <span className="check" />

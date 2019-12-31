@@ -16,6 +16,9 @@ const InspectionItem = ({ item, i }) => {
           {item.SiteAbb}
         </td>
         <td onClick={toggle} style={{ cursor: 'pointer' }} title="Click here">
+          {item.EquipmentID}
+        </td>
+        <td onClick={toggle} style={{ cursor: 'pointer' }} title="Click here">
           {item.Equipment}
         </td>
         <td>{item.Status}</td>

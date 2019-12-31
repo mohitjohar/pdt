@@ -57,7 +57,7 @@ const sliderSettings = {
   ]
 };
 
-const Dashboard = () => {
+const Dashboard = p => {
   const locations = [
     {
       inspectionc: '30',
@@ -137,7 +137,7 @@ const Dashboard = () => {
 
   return (
     <div className="page bg-gray">
-      <Header />
+      <Header props={p} />
       <div className="content">
         <div className="meters">
           <div className="container">

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+// get our fontawesome imports
 
-const AddUser = () => {
+const AddUser = p => {
   const [fname, setFname] = useState('');
   const [lname, setLname] = useState('');
   const [email, setEmail] = useState('');
@@ -31,7 +32,7 @@ const AddUser = () => {
 
   return (
     <>
-      <Header />
+      <Header props={p} />
       <div className="content gray-bg pdtb-100">
         <div className="container">
           <form

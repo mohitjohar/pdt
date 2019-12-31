@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import trackdimg from '../../img/trackd.png';
+import engineimg from '../../img/engine-icon.png';
 
 const Header = () => {
   return (
@@ -44,7 +45,7 @@ const Header = () => {
           </li>
           <li className="nav-item">
             <a href="#">
-              <i className="fa fa-truck" /> Units
+              <img src={engineimg} alt="engine-icon" /> Units
             </a>
           </li>
         </ul>
@@ -61,7 +62,7 @@ const Header = () => {
             </a>
           </li>
           <li className="nav-item">
-            <a href="#">abc@gmail.com</a>
+            <a href="#">Murray McC</a>
           </li>
         </ul>
       </nav>

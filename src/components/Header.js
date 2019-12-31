@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom';
 import { Dropdown, DropdownToggle, DropdownMenu, Collapse } from 'reactstrap';
 import Logoimg from '../img/pdt-logo.png';
 
-const Header = () => {
+const Header = ({ props }) => {
+  if (!localStorage.token) {
+    props.history.push('/login');
+  }
   // User dropdown desk
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const toggle = () => setDropdownOpen(prevState => !prevState);
@@ -67,7 +70,7 @@ const Header = () => {
                     <i className="fa fa-user-plus" />
                     &nbsp;&nbsp; Add User
                   </Link>
-                  <Link to="/login">
+                  <Link to="/logout">
                     <i className="fa fa-sign-out" aria-hidden="true" />
                     &nbsp;&nbsp; Logout
                   </Link>
@@ -110,7 +113,7 @@ const Header = () => {
                   <i className="fa fa-user-plus" />
                   &nbsp;&nbsp; Add User
                 </Link>
-                <Link to="/login">
+                <Link to="/logout">
                   <i className="fa fa-sign-out" aria-hidden="true" />
                   &nbsp;&nbsp; Logout
                 </Link>
