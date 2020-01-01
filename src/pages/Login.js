@@ -161,7 +161,7 @@ const Login = p => {
             </div>
           </div>
         </div>
-        <footer className="zindex-100 navbar navbar-transparent footer1 mb-0">
+        <footer className="navbar navbar-transparent footer1 mb-0">
           <Footer />
         </footer>
       </div>

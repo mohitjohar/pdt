@@ -428,11 +428,6 @@ img.logo1 {
   max-width: 100px;
 }
 
-.zindex-100 {
-  position: relative;
-  z-index: 9999999;
-}
-
 .footer1 a {
   color: #fff !important;
   text-transform: initial !important;
@@ -696,12 +691,6 @@ form.maxw-500 {
   .header-top .pull-left ul.navbar-nav {
     flex-direction: inherit;
   }
-
-  footer.zindex-100 {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
   div#navbarSupportedContent {
     background-color: transparent;
     width: 100%;
@@ -740,6 +729,9 @@ form.maxw-500 {
 }
 
 @media (max-width: 767px) {
+  footer.navbar.navbar-transparent {
+    justify-content: center;
+  }
   .modal-dialog {
     padding: 15px;
     margin: 50px auto;

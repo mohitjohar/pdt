@@ -183,7 +183,7 @@ const AddUser = p => {
           </form>
         </div>
       </div>
-      <footer className="zindex-100 navbar navbar-transparent footer2 mb-0">
+      <footer className="navbar navbar-transparent footer2 mb-0">
         <Footer />
       </footer>
     </>
