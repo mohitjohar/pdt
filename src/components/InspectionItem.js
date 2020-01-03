@@ -34,6 +34,7 @@ const InspectionItem = ({ item, i }) => {
             {item.Document}
           </a>
         </td>
+        <td>{item.Prioritisation}</td>
       </tr>
       <InspectionModal
         Date={item.Date}
@@ -44,6 +45,7 @@ const InspectionItem = ({ item, i }) => {
         ReportL={item.ReportL}
         Document={item.Document}
         DocumentL={item.DocumentL}
+        Prioritisation={item.Prioritisation}
         className={className + i}
         modal={modal}
         toggle={toggle}

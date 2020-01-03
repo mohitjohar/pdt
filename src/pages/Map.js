@@ -75,6 +75,8 @@ const Map = p => {
   const [asset6, setAsset6] = useState(false);
   const [asset7, setAsset7] = useState(false);
   const [asset8, setAsset8] = useState(false);
+  const [asset9, setAsset9] = useState(false);
+  const [asset10, setAsset10] = useState(false);
   const [zoom, setZoom] = useState(5);
   const assetSets = () => {
     setAsset1(!value);
@@ -100,15 +102,17 @@ const Map = p => {
   };
 
   const [data1, setData1] = useState([
-    { zoom: 5, lat: -25.2743988, lng: 133.7751312, name: 'australia' },
-    { zoom: 10, lat: -26.2743948, lng: 134.7751312, name: 'asset1' },
-    { zoom: 10, lat: -27.2743938, lng: 135.7751322, name: 'asset2' },
-    { zoom: 10, lat: -28.2743927, lng: 136.7751332, name: 'asset3' },
-    { zoom: 10, lat: -24.2743919, lng: 133.7751342, name: 'asset4' },
-    { zoom: 10, lat: -25.107516, lng: 148.982235, name: 'asset5' },
-    { zoom: 10, lat: -26.107516, lng: 149.982235, name: 'asset6' },
-    { zoom: 10, lat: -27.107516, lng: 150.982235, name: 'asset7' },
-    { zoom: 10, lat: -28.107516, lng: 147.982235, name: 'asset8' }
+    { zoom: 5, lat: -22.293324, lng: 113.955756, name: 'australia' },
+    { zoom: 10, lat: -23.141917, lng: 117.255475, name: 'WAIO-blue' },
+    { zoom: 10, lat: -31.250117, lng: 120.041039, name: 'WAIO' },
+    { zoom: 10, lat: -32.444627, lng: 115.998070, name: 'WAIO & NEC' },
+    { zoom: 10, lat: -34.641996, lng: 138.849633, name: 'OD - Orange' },
+    { zoom: 10, lat: -37.837070, lng: 144.620740, name: 'OD' },
+    { zoom: 10, lat: -41.126077, lng: 146.664197, name: 'asset6' },
+    { zoom: 10, lat: -28.815533, lng: 153.087914, name: 'NEC' },
+    { zoom: 10, lat: -27.576190, lng: 152.209008, name: 'BMA & BMC' },
+    { zoom: 10, lat: -23.291530, lng: 149.572289, name: 'BMA' },
+    { zoom: 10, lat: -20.848260, lng: 148.517602, name: 'BMC' }
   ]);
 
   const setMap = e => {
@@ -118,22 +122,30 @@ const Map = p => {
       lng: e.lng
     });
 
-    if (e.name === 'asset1') {
+    if (e.name === 'australia') {
       setAsset1(true);
-    } else if (e.name === 'asset2') {
+    } else if (e.name === 'WAIO-blue') {
       setAsset2(true);
-    } else if (e.name === 'asset3') {
+    } else if (e.name === 'WAIO') {
       setAsset3(true);
-    } else if (e.name === 'asset4') {
+    } else if (e.name === 'WAIO & NEC') {
       setAsset4(true);
-    } else if (e.name === 'asset5') {
+    } else if (e.name === 'OD - Orange') {
       setAsset5(true);
+    } else if (e.name === 'OD') {
+      setAsset6(true);
     } else if (e.name === 'asset6') {
       setAsset6(true);
-    } else if (e.name === 'asset7') {
+    } else if (e.name === 'NEC') {
       setAsset7(true);
-    } else if (e.name === 'asset8') {
+    } else if (e.name === 'BMA & BMC') {
       setAsset8(true);
+    }
+    else if (e.name === 'BMA') {
+      setAsset9(true);
+    }
+    else if (e.name === 'BMC') {
+      setAsset10(true);
     }
   };
 
@@ -535,6 +547,78 @@ const Map = p => {
                       </a>
                     </div>
                   </div>
+                  {/* Asset 9 */}
+                  <div className="d-flex align-items-center map-fliter fliter3 justify-content-between">
+                    <div className="d-inline-flex align-items-center">
+                      <a href="#" className="nav-link">
+                        <input
+                          type="checkbox"
+                          checked={asset7}
+                          onChange={() => setAsset9(!asset9)}
+                        />
+                      </a>
+                      <a href="#" className="nav-link">
+                        <i className="fa fa-square text-yellow" />
+                      </a>
+                      <a
+                        href="#"
+                        className="nav-link"
+                        onClick={() => setMap(data1[9])}
+                      >
+                        {data1[9].name}
+                      </a>
+                    </div>
+                    <div className="d-inline-flex align-items-center">
+                      <a href="#" className="nav-link">
+                        <i
+                          className="fa fa-crosshairs"
+                          onClick={() => setMap(data1[9])}
+                        />
+                      </a>
+                      <a href="#" className="nav-link">
+                        <i className="fa fa-chevron-circle-down" />
+                      </a>
+                      <a href="#" className="nav-link">
+                        <i className="fa fa-times" />
+                      </a>
+                    </div>
+                  </div>
+                  {/* Asset 10 */}
+                  <div className="d-flex align-items-center map-fliter fliter3 justify-content-between">
+                    <div className="d-inline-flex align-items-center">
+                      <a href="#" className="nav-link">
+                        <input
+                          type="checkbox"
+                          checked={asset7}
+                          onChange={() => setAsset10(!asset10)}
+                        />
+                      </a>
+                      <a href="#" className="nav-link">
+                        <i className="fa fa-square text-yellow" />
+                      </a>
+                      <a
+                        href="#"
+                        className="nav-link"
+                        onClick={() => setMap(data1[10])}
+                      >
+                        {data1[10].name}
+                      </a>
+                    </div>
+                    <div className="d-inline-flex align-items-center">
+                      <a href="#" className="nav-link">
+                        <i
+                          className="fa fa-crosshairs"
+                          onClick={() => setMap(data1[10])}
+                        />
+                      </a>
+                      <a href="#" className="nav-link">
+                        <i className="fa fa-chevron-circle-down" />
+                      </a>
+                      <a href="#" className="nav-link">
+                        <i className="fa fa-times" />
+                      </a>
+                    </div>
+                  </div>
                 </Collapse>
               </Collapse>
             </div>
@@ -545,7 +629,7 @@ const Map = p => {
               className="mobimap"
             >
               <GoogleMapReact
-                options={function(maps) {
+                options={function (maps) {
                   return { mapTypeId: 'hybrid' };
                 }}
                 center={center}
@@ -577,6 +661,12 @@ const Map = p => {
                 )}
                 {asset8 && (
                   <AnyReactComponent8 lat={data1[8].lat} lng={data1[8].lng} />
+                )}
+                {asset9 && (
+                  <AnyReactComponent8 lat={data1[9].lat} lng={data1[9].lng} />
+                )}
+                {asset10 && (
+                  <AnyReactComponent8 lat={data1[10].lat} lng={data1[10].lng} />
                 )}
               </GoogleMapReact>
             </div>

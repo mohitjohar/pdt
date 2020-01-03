@@ -13,10 +13,10 @@ const Login = p => {
   const [remember, setRemember] = useState('');
 
   const handleSubmit = () => {
-    if (!remember) {
-      alert('Please Fill out Remember field');
-      return false;
-    }
+    // if (!remember) {
+    //   alert('Please Fill out Remember field');
+    //   return false;
+    // }
 
     const url = 'https://reqres.in/api/login';
     const data = {
@@ -38,7 +38,7 @@ const Login = p => {
             localStorage.setItem('token', res.token);
             console.log('token:', res.token);
             p.history.push('/');
-            alert('Login Successfully');
+            // alert('Login Successfully');
           } else {
             alert('Enter valid Email or Password');
           }

@@ -131,9 +131,10 @@ const AddUser = p => {
                   required
                 >
                   <option value="">Department</option>
-                  <option value="a">A</option>
-                  <option value="b">B</option>
-                  <option value="c">C</option>
+                  <option value="Warehouse">Warehouse</option>
+                  <option value="RepairWarranties">Repairs &amp; Warranties</option>
+                  <option value="Inventory">Inventory</option>
+                  <option value="Process Control">Process Control</option>
                 </select>
               </div>
             </div>

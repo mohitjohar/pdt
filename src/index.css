@@ -62,14 +62,22 @@ img.inspectionimg {
 }
 th,
 td {
-  padding: 8px 13px;
-  font-size: 16px;
-  border-right: 1px solid #0000002b;
+  padding: 12px 13px;
+  font-size: 14px;
+  border-right: 1px solid #ddd;
   position: relative;
 }
 
+td a {
+  color: #3c4858;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
 tr {
-  border: 1px solid #00000029;
+  border: 1px solid #ddd;
+  background-color: #fff;
+
 }
 th > i {
   position: absolute;
@@ -84,10 +92,19 @@ img[alt='carsIcon'] {
   transform: rotate(180deg);
 }
 th.site-abb,
-th.equipment,
+th.equipment {
+  min-width: 170px;
+}
+th.prioritisation {
+    min-width: 320px;
+}
 th.inspection,
 th.document {
-  min-width: 160px;
+  min-width: 250px;
+}
+th.equipmentid {
+  min-width: 200px;
+
 }
 .overflow-auto-table {
   overflow: auto;
@@ -137,8 +154,10 @@ img.black[alt='engine-icon'] {
 table.list-table th {
   font-weight: 400;
   font-size: 15px;
-  background-color: #e3e3e39c;
+  background-color: #000000;
   text-transform: uppercase;
+  color: #fff;
+
 }
 img[alt='engine-icon'] {
   max-width: 27px;
@@ -206,6 +225,18 @@ input[type='checkbox'].minus.i::after {
   display: flex !important;
   align-items: center;
   width: 100%;
+  background-image: linear-gradient( to top, #0083c8 2px, rgba(156, 39, 176, 0) 2px ), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
+}
+.DateRangePickerInput_calendarIcon {
+  padding: 8px 10px !important;
+}
+.DateRangePickerInput__withBorder {
+
+  border-radius: 0.25rem !important;
+}
+.DateInput_input {
+  padding: 3px 11px!important;
+  font-size: 15px!important;
 }
 
 .fliter3 a.nav-link {

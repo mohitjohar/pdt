@@ -17,19 +17,22 @@ const Inspection = [
     Status: 'Completed',
     Report: '202005015 Inspection Report',
     ReportL: Pdf,
-    Document: 'RGM JRA',
-    DocumentL: Pdf
+    Document: 'JRA_JHA J1589-01-00',
+    DocumentL: Pdf,
+    Prioritisation: 10
+
   },
   {
     Date: '01/05/20',
     SiteAbb: 'OD',
     EquipmentID: 'CC 3-CC4-CSS',
-    Equipment: 'Spare Drive Assembly',
+    Equipment: 'Drive Assembly',
     Status: 'Completed',
-    Report: '20200501.C Inspection Report',
+    Report: '43952 CC3-CC4-CC5',
     ReportL: Pdf,
-    Document: 'FSM JRA',
-    DocumentL: Pdf
+    Document: 'JRA_JHA CC3-CC4-CC5',
+    DocumentL: Pdf,
+    Prioritisation: 10
   },
   {
     Date: '01/05/20',
@@ -37,10 +40,335 @@ const Inspection = [
     EquipmentID: '2BF1353',
     Equipment: 'Vacuum Pump',
     Status: 'Pending',
-    Report: 'A20200501.K Inspection Report',
+    Report: '43952 2BE1353',
     ReportL: Pdf,
-    Document: 'LKT JRA',
-    DocumentL: Pdf
+    Document: 'JRA_JHA 2BE1353',
+    DocumentL: Pdf,
+    Prioritisation: 8
+  },
+  {
+    Date: '01/05/20',
+    SiteAbb: 'OD',
+    EquipmentID: 'MASSZCHNG B3SH 13',
+    Equipment: 'Motor',
+    Status: 'Pending',
+    Report: '3952 MASSZCHNG B3SH 13',
+    ReportL: Pdf,
+    Document: 'JRA_JHA MASSZCHNG B3SH 13',
+    DocumentL: Pdf,
+    Prioritisation: 8
+  },
+  {
+    Date: '01/05/20',
+    SiteAbb: 'OD',
+    EquipmentID: '6-097-424',
+    Equipment: 'Geared Drive',
+    Status: 'Pending',
+    Report: '43952 6-097-424',
+    ReportL: Pdf,
+    Document: 'JRA_JHA 6-097-424',
+    DocumentL: Pdf,
+    Prioritisation: 8
+  },
+  {
+    Date: '01/05/20',
+    SiteAbb: 'OD',
+    EquipmentID: '6-097-424',
+    Equipment: 'Geared Drive',
+    Status: 'Pending',
+    Report: '43952 6-097-424',
+    ReportL: Pdf,
+    Document: 'JRA_JHA 6-097-424',
+    DocumentL: Pdf,
+    Prioritisation: 8
+  },
+  {
+    Date: '01/05/20',
+    SiteAbb: 'OD',
+    EquipmentID: '07H178',
+    Equipment: 'Hydraulic Cylinder',
+    Status: 'Pending',
+    Report: '43952 07H178',
+    ReportL: Pdf,
+    Document: 'JRA_JHA 07H178',
+    DocumentL: Pdf,
+    Prioritisation: 8
+  },
+  {
+    Date: '01/05/20',
+    SiteAbb: 'OD',
+    EquipmentID: 'YA-0000-M000-10',
+    Equipment: 'Gearbox',
+    Status: 'Pending',
+    Report: '43952 YA-0000-M000-10',
+    ReportL: Pdf,
+    Document: 'JRA_JHA YA-0000-M000-10',
+    DocumentL: Pdf,
+    Prioritisation: 8
+  },
+  {
+    Date: '01/05/20',
+    SiteAbb: 'OD',
+    EquipmentID: 'CC3-CC4-CC67',
+    Equipment: 'Gearbox',
+    Status: 'Pending',
+    Report: '43952 CC3-CC4-CC67',
+    ReportL: Pdf,
+    Document: 'JRA_JHA CC3-CC4-CC67',
+    DocumentL: Pdf,
+    Prioritisation: 8
+  },
+  {
+    Date: '01/05/20',
+    SiteAbb: 'OD',
+    EquipmentID: 'MASSZCHNG B3SH 13',
+    Equipment: 'Motor',
+    Status: 'Complete',
+    Report: '43952 MASSZCHNG B3SH 13',
+    ReportL: Pdf,
+    Document: 'JRA_JHA MASSZCHNG B3SH 13',
+    DocumentL: Pdf,
+    Prioritisation: 8
+  },
+  {
+    Date: '01/05/20',
+    SiteAbb: 'OD',
+    EquipmentID: 'MASSZCHNG B3SH 13',
+    Equipment: 'Motor',
+    Status: 'Complete',
+    Report: '43952 MASSZCHNG B3SH 13',
+    ReportL: Pdf,
+    Document: 'JRA_JHA MASSZCHNG B3SH 13',
+    DocumentL: Pdf,
+    Prioritisation: 8
+  },
+  {
+    Date: '01/05/20',
+    SiteAbb: 'OD',
+    EquipmentID: '2BE1362',
+    Equipment: 'Vacuum Pump',
+    Status: 'Complete',
+    Report: '43952 2BE1362',
+    ReportL: Pdf,
+    Document: 'JRA_JHA 2BE1362',
+    DocumentL: Pdf,
+    Prioritisation: 8
+  },
+  {
+    Date: '15/4/20',
+    SiteAbb: 'OD',
+    EquipmentID: 'B3SH13',
+    Equipment: 'Drive Assembly',
+    Status: 'Complete',
+    Report: '43936 B3SH13',
+    ReportL: Pdf,
+    Document: 'JRA_JHA B3SH13',
+    DocumentL: Pdf,
+    Prioritisation: 8
+  },
+  {
+    Date: '15/4/20',
+    SiteAbb: 'OD',
+    EquipmentID: '15H217',
+    Equipment: '10" Flanged Mount',
+    Status: 'Complete',
+    Report: '43936 15H217',
+    ReportL: Pdf,
+    Document: 'JRA_JHA 15H217',
+    DocumentL: Pdf,
+    Prioritisation: 8
+  },
+  {
+    Date: '15/4/20',
+    SiteAbb: 'OD',
+    EquipmentID: '15H218',
+    Equipment: '6" Flanged Mount',
+    Status: 'Complete',
+    Report: '43936 15H218',
+    ReportL: Pdf,
+    Document: 'JRA_JHA 15H218',
+    DocumentL: Pdf,
+    Prioritisation: 6
+  },
+  {
+    Date: '15/4/20',
+    SiteAbb: 'OD',
+    EquipmentID: '07D15',
+    Equipment: 'Transformer',
+    Status: 'Complete',
+    Report: '43936 07D15',
+    ReportL: Pdf,
+    Document: 'JRA_JHA 07D15',
+    DocumentL: Pdf,
+    Prioritisation: 6
+  },
+  {
+    Date: '15/4/20',
+    SiteAbb: 'OD',
+    EquipmentID: '154356',
+    Equipment: 'Transformer',
+    Status: 'Complete',
+    Report: '43936 154356',
+    ReportL: Pdf,
+    Document: 'JRA_JHA 154356',
+    DocumentL: Pdf,
+    Prioritisation: 6
+  },
+  {
+    Date: '15/4/20',
+    SiteAbb: 'OD',
+    EquipmentID: 'SP215-8-7',
+    Equipment: 'Bore Pump',
+    Status: 'Complete',
+    Report: '43936 SP215-8-7',
+    ReportL: Pdf,
+    Document: 'JRA_JHA SP215-8-7',
+    DocumentL: Pdf,
+    Prioritisation: 6
+  },
+  {
+    Date: '15/4/20',
+    SiteAbb: 'OD',
+    EquipmentID: 'SP46-15-24',
+    Equipment: 'Bore Pump',
+    Status: 'Complete',
+    Report: '43936 SP46-15-24',
+    ReportL: Pdf,
+    Document: 'JRA_JHA SP46-15-24',
+    DocumentL: Pdf,
+    Prioritisation: 6
+  },
+  {
+    Date: '15/4/20',
+    SiteAbb: 'OD',
+    EquipmentID: 'L1850',
+    Equipment: 'Cylinder Hoist',
+    Status: 'Complete',
+    Report: '43936 L1850',
+    ReportL: Pdf,
+    Document: 'JRA_JHA L1850',
+    DocumentL: Pdf,
+    Prioritisation: 6
+  },
+  {
+    Date: '15/4/20',
+    SiteAbb: 'OD',
+    EquipmentID: 'R2900',
+    Equipment: 'Tilt Link',
+    Status: 'Complete',
+    Report: '43936 R2900',
+    ReportL: Pdf,
+    Document: 'JRA_JHA R2900',
+    DocumentL: Pdf,
+    Prioritisation: 4
+  },
+  {
+    Date: '15/4/20',
+    SiteAbb: 'OD',
+    EquipmentID: '15H211',
+    Equipment: 'Boom Cylinder',
+    Status: 'Complete',
+    Report: '43936 15H211',
+    ReportL: Pdf,
+    Document: 'JRA_JHA 15H211',
+    DocumentL: Pdf,
+    Prioritisation: 4
+  },
+  {
+    Date: '15/4/20',
+    SiteAbb: 'OD',
+    EquipmentID: '15H212',
+    Equipment: 'Arm Cylinder',
+    Status: 'Complete',
+    Report: '43936 15H212',
+    ReportL: Pdf,
+    Document: 'JRA_JHA 15H212',
+    DocumentL: Pdf,
+    Prioritisation: 4
+  },
+  {
+    Date: '15/4/20',
+    SiteAbb: 'OD',
+    EquipmentID: '15D4',
+    Equipment: 'Arm Cylinder',
+    Status: 'Complete',
+    Report: '43936 15D4',
+    ReportL: Pdf,
+    Document: 'JRA_JHA 15D4',
+    DocumentL: Pdf,
+    Prioritisation: 4
+  },
+  {
+    Date: '15/4/20',
+    SiteAbb: 'OD',
+    EquipmentID: '15HH192',
+    Equipment: 'Backhoe Boom',
+    Status: 'Complete',
+    Report: '43936 15HH192',
+    ReportL: Pdf,
+    Document: 'JRA_JHA 15HH192',
+    DocumentL: Pdf,
+    Prioritisation: 4
+  },
+  {
+    Date: '15/4/20',
+    SiteAbb: 'OD',
+    EquipmentID: '15HH193',
+    Equipment: 'Backhoe Bucket',
+    Status: 'Pending',
+    Report: '43936 15HH193',
+    ReportL: Pdf,
+    Document: 'JRA_JHA 15HH193',
+    DocumentL: Pdf,
+    Prioritisation: 4
+  },
+  {
+    Date: '15/4/20',
+    SiteAbb: 'OD',
+    EquipmentID: '15HH980',
+    Equipment: 'Loading Shovel Arm',
+    Status: 'Pending',
+    Report: '43936 15HH980',
+    ReportL: Pdf,
+    Document: 'JRA_JHA 15HH980',
+    DocumentL: Pdf,
+    Prioritisation: 4
+  },
+  {
+    Date: '15/4/20',
+    SiteAbb: 'OD',
+    EquipmentID: '07H119',
+    Equipment: 'Tilt Cylinder',
+    Status: 'Pending',
+    Report: '43936 07H119',
+    ReportL: Pdf,
+    Document: 'JRA_JHA 07H119',
+    DocumentL: Pdf,
+    Prioritisation: 4
+  },
+  {
+    Date: '15/4/20',
+    SiteAbb: 'OD',
+    EquipmentID: '15HH192',
+    Equipment: 'Backhoe Arm',
+    Status: 'Pending',
+    Report: '43936 15HH192',
+    ReportL: Pdf,
+    Document: 'JRA_JHA 15HH192',
+    DocumentL: Pdf,
+    Prioritisation: 4
+  },
+  {
+    Date: '15/4/20',
+    SiteAbb: 'OD',
+    EquipmentID: '07H1192',
+    Equipment: 'Tilt Cylinder, Double',
+    Status: 'Pending',
+    Report: '43936 07H1192',
+    ReportL: Pdf,
+    Document: 'JRA_JHA 07H1192',
+    DocumentL: Pdf,
+    Prioritisation: 4
   }
 ];
 
@@ -93,7 +421,6 @@ const Inspections = p => {
                   <div className="col-md-3">
                     <label>Loaction</label>
                     <select className="form-control mb-3">
-                      <option value="0">All</option>
                       <option value="1">Australia</option>
                       <option value="2">BMA</option>
                       <option value="3">BMC</option>
@@ -135,28 +462,35 @@ const Inspections = p => {
               </Collapse>
             </div>
           </div>
-          <div className="overflow-auto-table">
-            <table className="list-table w-100">
-              <tr>
-                <th>
-                  Date <i className="fa fa-sort-down" />
-                </th>
-                <th className="site-abb">Site Abbreviation</th>
-                <th className="equipmentid">Equipment ID</th>
-                <th className="equipment">Equipment Name</th>
-                <th className="status">Status</th>
-                <th className="inspection">Inspection Report</th>
-                <th className="document">Risk Document</th>
-              </tr>
+        </div>
+        <div className="container-fluid">
+          <div className="">
+            <div className="col-sm-12">
+              <div className="overflow-auto-table">
+                <table className="list-table w-100">
+                  <tr>
+                    <th>
+                      Date <i className="fa fa-sort-down" />
+                    </th>
+                    <th className="site-abb">Site Abbreviation</th>
+                    <th className="equipmentid">Equipment ID</th>
+                    <th className="equipment">Equipment Name</th>
+                    <th className="status">Status</th>
+                    <th className="inspection">Inspection Report</th>
+                    <th className="document">Risk Document</th>
+                    <th className="prioritisation">Prioritisation of Corrective Action</th>
+                  </tr>
 
-              {Inspection.map((item, i) => {
-                return (
-                  <>
-                    <InspectionItem item={item} i={i} />
-                  </>
-                );
-              })}
-            </table>
+                  {Inspection.map((item, i) => {
+                    return (
+                      <>
+                        <InspectionItem item={item} i={i} />
+                      </>
+                    );
+                  })}
+                </table>
+              </div>
+            </div>
           </div>
         </div>
       </div>

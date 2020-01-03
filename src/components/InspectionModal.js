@@ -47,6 +47,12 @@ const InspectionModal = item => {
                 </a>
               </div>
             </div>
+            <div className="d-flex justify-content-center">
+              <strong className="w-100">Prioritisation Of Corrective Action</strong>
+              <div className="w-100">
+                {item.Prioritisation}
+              </div>
+            </div>
           </div>
         </ModalBody>
         <ModalFooter>
