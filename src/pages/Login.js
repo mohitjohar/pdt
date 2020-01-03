@@ -85,7 +85,7 @@ const Login = p => {
                         name="email"
                         value={email}
                         onChange={e => setEmail(e.target.value)}
-                        className="form-control"
+                        className={email ? 'form-control' : 'form-control unfilled'}
                         placeholder="Email..."
                         required
                       />
@@ -102,7 +102,7 @@ const Login = p => {
                         type="password"
                         name="password"
                         id="password"
-                        className="form-control"
+                        className={password ? 'form-control' : 'form-control unfilled'}
                         placeholder="Password..."
                         value={password}
                         onChange={e => setPassword(e.target.value)}
