@@ -165,14 +165,11 @@ const Map = p => {
       setAsset7(true);
     } else if (e.id === 8) {
       setAsset8(true);
-    }
-    else if (e.id === 9) {
+    } else if (e.id === 9) {
       setAsset9(true);
-    }
-    else if (e.id === 10) {
+    } else if (e.id === 10) {
       setAsset10(true);
-    }
-	else if (e.id === 11) {
+    } else if (e.id === 11) {
       setAsset11(true);
     }
   };

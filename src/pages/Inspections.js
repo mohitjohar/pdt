@@ -419,7 +419,7 @@ const Inspections = p => {
                     </div>
                   </div>
                   <div className="col-md-3">
-                    <label>Loaction</label>
+                    <label>Location</label>
                     <select className="form-control mb-3">
                       <option value="1">Australia</option>
                       <option value="2">BMA</option>
