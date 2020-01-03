@@ -109,6 +109,7 @@ th.equipmentid {
 .overflow-auto-table {
   overflow: auto;
   margin: 0 -15px;
+  max-height: 433px;
 }
 
 .nav-link.dropdown-toggle {
