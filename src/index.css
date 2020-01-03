@@ -150,6 +150,7 @@ img.black[alt='engine-icon'] {
   position: absolute;
   right: 11px;
   top: 10px;
+  cursor:pointer;
 }
 
 table.list-table th {
