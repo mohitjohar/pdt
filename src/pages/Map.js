@@ -2,49 +2,69 @@ import React, { useState } from 'react';
 import GoogleMapReact from 'google-map-react';
 import { Collapse } from 'reactstrap';
 import mapmarker from '../img/map-marker.png';
-import mapmarkergeen from '../img/map-marker-green.png';
+import mapmarkergreen from '../img/map-marker-green.png';
+import mapmarkerpurple from '../img/map-marker-purple.png';
+import mapmarkerpink from '../img/map-marker-pink.png';
+import mapmarkerblue from '../img/map-marker-blue.png';
+import mapmarkerorange from '../img/map-marker-orange.png';
 import azIcon from '../img/AZ.png';
 import Header from '../components/map/Header';
 import engineimg from '../img/engine-icon.png';
 
 const AnyReactComponent1 = () => (
   <div>
-    <img src={mapmarker} alt="map-marker" />
+    <img src={mapmarkerblue} alt="map-marker" />
   </div>
 );
 const AnyReactComponent2 = () => (
   <div>
-    <img src={mapmarker} alt="map-marker" />
+    <img src={mapmarkerblue} alt="map-marker" />
   </div>
 );
 const AnyReactComponent3 = () => (
   <div>
-    <img src={mapmarker} alt="map-marker" />
+    <img src={mapmarkerblue} alt="map-marker" /><img src={mapmarkergreen} alt="map-marker" />
   </div>
 );
 const AnyReactComponent4 = () => (
   <div>
-    <img src={mapmarker} alt="map-marker" />
+    <img src={mapmarkerorange} alt="map-marker" />
   </div>
 );
 const AnyReactComponent5 = () => (
   <div>
-    <img src={mapmarkergeen} alt="map-marker" />
+    <img src={mapmarkerorange} alt="map-marker" />
   </div>
 );
 const AnyReactComponent6 = () => (
   <div>
-    <img src={mapmarkergeen} alt="map-marker" />
+    <img src={mapmarkerpurple} alt="map-marker" />
   </div>
 );
 const AnyReactComponent7 = () => (
   <div>
-    <img src={mapmarkergeen} alt="map-marker" />
+    <img src={mapmarkergreen} alt="map-marker" />
   </div>
 );
 const AnyReactComponent8 = () => (
   <div>
-    <img src={mapmarkergeen} alt="map-marker" />
+  <img src={mapmarker} alt="map-marker" />
+    <img src={mapmarkerpink} alt="map-marker" />
+  </div>
+);
+const AnyReactComponent9 = () => (
+  <div>
+    <img src={mapmarkerpink} alt="map-marker" />
+  </div>
+);
+const AnyReactComponent10 = () => (
+  <div>
+    <img src={mapmarker} alt="map-marker" />
+  </div>
+);
+const AnyReactComponent11 = () => (
+  <div>
+    <img src={mapmarkerpurple} alt="map-marker" />
   </div>
 );
 
@@ -77,6 +97,7 @@ const Map = p => {
   const [asset8, setAsset8] = useState(false);
   const [asset9, setAsset9] = useState(false);
   const [asset10, setAsset10] = useState(false);
+  const [asset11, setAsset11] = useState(false);
   const [zoom, setZoom] = useState(5);
   const assetSets = () => {
     setAsset1(!value);
@@ -89,6 +110,7 @@ const Map = p => {
     setAsset8(!value);
 	setAsset9(!value);
 	setAsset10(!value);
+	setAsset11(!value);
     setValue(!value);
   };
 
@@ -104,17 +126,18 @@ const Map = p => {
   };
 
   const [data1, setData1] = useState([
-    { zoom: 5, lat: -25.2743988, lng: 133.7751312, name: 'australia' },
-    { zoom: 10, lat: -23.141917, lng: 117.255475, name: 'WAIO-blue' },
-    { zoom: 10, lat: -31.250117, lng: 120.041039, name: 'WAIO' },
-    { zoom: 10, lat: -32.444627, lng: 115.998070, name: 'WAIO & NEC' },
-    { zoom: 10, lat: -34.641996, lng: 138.849633, name: 'OD - Orange' },
-    { zoom: 10, lat: -37.837070, lng: 144.620740, name: 'OD' },
-    { zoom: 10, lat: -41.126077, lng: 146.664197, name: 'asset6' },
-    { zoom: 10, lat: -28.815533, lng: 153.087914, name: 'NEC' },
-    { zoom: 10, lat: -27.576190, lng: 152.209008, name: 'BMA & BMC' },
-    { zoom: 10, lat: -23.291530, lng: 149.572289, name: 'BMA' },
-    { zoom: 10, lat: -20.848260, lng: 148.517602, name: 'BMC' }
+    { id: 0, zoom: 5, lat: -25.2743988, lng: 133.7751312, name: 'australia' },
+    { id: 1, zoom: 10, lat: -23.141917, lng: 117.255475, name: 'WAIO' },
+    { id: 2, zoom: 10, lat: -31.250117, lng: 120.041039, name: 'WAIO' },
+    { id: 3, zoom: 10, lat: -32.444627, lng: 115.998070, name: 'WAIO & NEC' },
+    { id: 4, zoom: 10, lat: -33.641996, lng: 137.849633, name: 'OD' },
+    { id: 5, zoom: 10, lat: -36.837070, lng: 144.620740, name: 'OD' },
+    { id: 6, zoom: 10, lat: -39.126077, lng: 145.664197, name: 'asset6' },
+    { id: 7, zoom: 10, lat: -31.815533, lng: 151.087914, name: 'NEC' },
+    { id: 8, zoom: 10, lat: -27.576190, lng: 152.209008, name: 'BMA & BMC' },
+    { id: 9, zoom: 10, lat: -23.291530, lng: 149.572289, name: 'BMA' },
+    { id: 10, zoom: 10, lat: -20.848260, lng: 148.517602, name: 'BMC' },
+	{ id: 11, zoom: 10, lat: -22.141917, lng: 113.255475, name: 'asset11'}
   ]);
 
   const setMap = e => {
@@ -126,28 +149,31 @@ const Map = p => {
 
     if (e.name === 'australia') {
       setAsset1(true);
-    } else if (e.name === 'WAIO-blue') {
+    } else if (e.id === 1) {
       setAsset2(true);
-    } else if (e.name === 'WAIO') {
+    } else if (e.id === 2) {
       setAsset3(true);
-    } else if (e.name === 'WAIO & NEC') {
+    } else if (e.id === 3) {
       setAsset4(true);
-    } else if (e.name === 'OD - Orange') {
+    } else if (e.id === 4) {
       setAsset5(true);
-    } else if (e.name === 'OD') {
+    } else if (e.id === 5) {
       setAsset6(true);
-    } else if (e.name === 'asset6') {
+    } else if (e.id === 6) {
       setAsset6(true);
-    } else if (e.name === 'NEC') {
+    } else if (e.id === 7) {
       setAsset7(true);
-    } else if (e.name === 'BMA & BMC') {
+    } else if (e.id === 8) {
       setAsset8(true);
     }
-    else if (e.name === 'BMA') {
+    else if (e.id === 9) {
       setAsset9(true);
     }
-    else if (e.name === 'BMC') {
+    else if (e.id === 10) {
       setAsset10(true);
+    }
+	else if (e.id === 11) {
+      setAsset11(true);
     }
   };
 
@@ -621,6 +647,42 @@ const Map = p => {
                       </a>
                     </div>
                   </div>
+				  {/* Asset 11 */}
+                  <div className="d-flex align-items-center map-fliter fliter3 justify-content-between">
+                    <div className="d-inline-flex align-items-center">
+                      <a href="#" className="nav-link">
+                        <input
+                          type="checkbox"
+                          checked={asset11}
+                          onChange={() => setAsset11(!asset11)}
+                        />
+                      </a>
+                      <a href="#" className="nav-link">
+                        <i className="fa fa-square text-yellow" />
+                      </a>
+                      <a
+                        href="#"
+                        className="nav-link"
+                        onClick={() => setMap(data1[11])}
+                      >
+                        {data1[11].name}
+                      </a>
+                    </div>
+                    <div className="d-inline-flex align-items-center">
+                      <a href="#" className="nav-link">
+                        <i
+                          className="fa fa-crosshairs"
+                          onClick={() => setMap(data1[11])}
+                        />
+                      </a>
+                      <a href="#" className="nav-link">
+                        <i className="fa fa-chevron-circle-down" />
+                      </a>
+                      <a href="#" className="nav-link">
+                        <i className="fa fa-times" />
+                      </a>
+                    </div>
+                  </div>
                 </Collapse>
               </Collapse>
             </div>
@@ -665,10 +727,13 @@ const Map = p => {
                   <AnyReactComponent8 lat={data1[8].lat} lng={data1[8].lng} />
                 )}
                 {asset9 && (
-                  <AnyReactComponent8 lat={data1[9].lat} lng={data1[9].lng} />
+                  <AnyReactComponent9 lat={data1[9].lat} lng={data1[9].lng} />
                 )}
                 {asset10 && (
-                  <AnyReactComponent8 lat={data1[10].lat} lng={data1[10].lng} />
+                  <AnyReactComponent10 lat={data1[10].lat} lng={data1[10].lng} />
+                )}
+				{asset11 && (
+                  <AnyReactComponent11 lat={data1[11].lat} lng={data1[11].lng} />
                 )}
               </GoogleMapReact>
             </div>
