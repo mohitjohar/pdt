@@ -102,7 +102,7 @@ const Map = p => {
   };
 
   const [data1, setData1] = useState([
-    { zoom: 5, lat: -22.293324, lng: 113.955756, name: 'australia' },
+    { zoom: 5, lat: -25.2743988, lng: 133.7751312, name: 'australia' },
     { zoom: 10, lat: -23.141917, lng: 117.255475, name: 'WAIO-blue' },
     { zoom: 10, lat: -31.250117, lng: 120.041039, name: 'WAIO' },
     { zoom: 10, lat: -32.444627, lng: 115.998070, name: 'WAIO & NEC' },
