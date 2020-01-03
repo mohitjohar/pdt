@@ -87,6 +87,8 @@ const Map = p => {
     setAsset6(!value);
     setAsset7(!value);
     setAsset8(!value);
+	setAsset9(!value);
+	setAsset10(!value);
     setValue(!value);
   };
 
@@ -553,7 +555,7 @@ const Map = p => {
                       <a href="#" className="nav-link">
                         <input
                           type="checkbox"
-                          checked={asset7}
+                          checked={asset9}
                           onChange={() => setAsset9(!asset9)}
                         />
                       </a>
@@ -589,7 +591,7 @@ const Map = p => {
                       <a href="#" className="nav-link">
                         <input
                           type="checkbox"
-                          checked={asset7}
+                          checked={asset10}
                           onChange={() => setAsset10(!asset10)}
                         />
                       </a>
