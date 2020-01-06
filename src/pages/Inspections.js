@@ -420,7 +420,7 @@ const Inspections = p => {
                     <div className="searchform">
                       <input
                         type="text"
-                        placeholder="Search Equipment Name"
+                        placeholder="Search Equipment"
                         className="form-control mb-3"
                       />
                       <i className="fa fa-search" />
