@@ -27,7 +27,9 @@ const InspectionModal = item => {
               <div className="w-100">{item.Date}</div>
             </div>
             <div className="d-flex justify-content-center">
-              <strong className="w-100">Site Abbreviation</strong>
+              <strong className="w-100" title="Site Abbreviation">
+                Site
+              </strong>
               <div className="w-100">{item.SiteAbb}</div>
             </div>
             <div className="d-flex justify-content-center">
@@ -35,7 +37,9 @@ const InspectionModal = item => {
               <div className="w-100">{item.EquipmentID}</div>
             </div>
             <div className="d-flex justify-content-center">
-              <strong className="w-100">Equipment Name</strong>
+              <strong className="w-100" title="Equipment Name">
+                Equipment
+              </strong>
               <div className="w-100">{item.Equipment}</div>
             </div>
             <div className="d-flex justify-content-center">
@@ -65,8 +69,11 @@ const InspectionModal = item => {
               </div>
             </div>
             <div className="d-flex justify-content-center">
-              <strong className="w-100">
-                Prioritisation Of Corrective Action
+              <strong
+                className="w-100"
+                title="Prioritisation Of Corrective Action"
+              >
+                PCA
               </strong>
               <div className="w-100">{item.Prioritisation}</div>
             </div>

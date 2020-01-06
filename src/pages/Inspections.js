@@ -478,14 +478,21 @@ const Inspections = p => {
                 <table className="list-table w-100">
                   <tr>
                     <th>Date</th>
-                    <th className="site-abb">Site</th>
+                    <th className="site-abb" title="Site Abbreviation">
+                      Site
+                    </th>
                     <th className="equipmentid">Equipment ID</th>
-                    <th className="equipment">Equipment</th>
+                    <th className="equipment" title="Equipment Name">
+                      Equipment
+                    </th>
                     <th className="equipment">Manufacturer</th>
                     <th className="status">Status</th>
                     <th className="inspection">Inspection Report</th>
                     <th className="document">Risk Document</th>
-                    <th className="prioritisation">
+                    <th
+                      className="prioritisation"
+                      title="Prioritisation Of Corrective Action"
+                    >
                       PCA <i className="fa fa-sort-down" />
                     </th>
                   </tr>
