@@ -705,7 +705,7 @@ form.maxw-500 > div {
 form.maxw-500 {
   max-width: 500px;
   margin: auto;
-  background-color: #fff;
+  background-color: #e3e6e9;
   padding: 15px;
   border-radius: 3px;
   box-shadow: 0 0 7px 1px #00000021;
@@ -718,7 +718,8 @@ form.maxw-500 {
 
 .corner-bottom-right,
 .corner-top-left,
-.corner-top-right {
+.corner-top-right,
+.corner-bottom-left {
   position: relative;
 }
 .corner-bottom-right::after {
@@ -744,12 +745,22 @@ form.maxw-500 {
 .corner-top-right:before {
   content: '';
   position: absolute;
-  border-top: 200px solid #706966;
-  border-left: 200px solid transparent;
-  right: -17px;
-  top: -17px;
+  border-top: 100px solid #0083c8;
+  border-left: 100px solid transparent;
+  right: -15px;
+  top: -15px;
+  z-index: -1;
 }
 
+.corner-bottom-left::after {
+  content: '';
+  position: absolute;
+  border-bottom: 100px solid #0083c8;
+  border-right: 100px solid transparent;
+  left: -15px;
+  bottom: -15px;
+  z-index: -1;
+}
 @media (max-width: 992px) {
   .row.align-items-center.mb-50 {
     margin-bottom: 135px;
