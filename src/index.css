@@ -77,7 +77,6 @@ tr:nth-child(even) {
 tr {
   border: 1px solid #ddd;
   background-color: #fff;
-
 }
 th > i {
   position: absolute;
@@ -96,7 +95,7 @@ th.equipment {
   min-width: 170px;
 }
 th.prioritisation {
-    min-width: 320px;
+  min-width: 320px;
 }
 th.inspection,
 th.document {
@@ -104,7 +103,6 @@ th.document {
 }
 th.equipmentid {
   min-width: 200px;
-
 }
 .overflow-auto-table {
   overflow: auto;
@@ -150,7 +148,7 @@ img.black[alt='engine-icon'] {
   position: absolute;
   right: 11px;
   top: 10px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 table.list-table th {
@@ -159,7 +157,6 @@ table.list-table th {
   background-color: #000000;
   text-transform: uppercase;
   color: #fff;
-
 }
 img[alt='engine-icon'] {
   max-width: 27px;
@@ -227,18 +224,22 @@ input[type='checkbox'].minus.i::after {
   display: flex !important;
   align-items: center;
   width: 100%;
-  background-image: linear-gradient( to top, #0083c8 2px, rgba(156, 39, 176, 0) 2px ), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
+  background-image: linear-gradient(
+      to top,
+      #0083c8 2px,
+      rgba(156, 39, 176, 0) 2px
+    ),
+    linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
 }
 .DateRangePickerInput_calendarIcon {
   padding: 8px 10px !important;
 }
 .DateRangePickerInput__withBorder {
-
   border-radius: 0.25rem !important;
 }
 .DateInput_input {
-  padding: 3px 11px!important;
-  font-size: 15px!important;
+  padding: 3px 11px !important;
+  font-size: 15px !important;
 }
 
 .fliter3 a.nav-link {
@@ -713,6 +714,40 @@ form.maxw-500 {
 .pdtb-100 {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.corner-bottom-right,
+.corner-top-left,
+.corner-top-right {
+  position: relative;
+}
+.corner-bottom-right::after {
+  content: '';
+  position: absolute;
+  border-bottom: 100px solid #0083c8;
+  border-left: 100px solid transparent;
+  bottom: -15px;
+  right: -15px;
+  z-index: -1;
+}
+
+.corner-top-left:before {
+  content: '';
+  position: absolute;
+  border-top: 100px solid #0083c8;
+  border-right: 100px solid transparent;
+  left: -15px;
+  top: -15px;
+  z-index: -1;
+}
+
+.corner-top-right:before {
+  content: '';
+  position: absolute;
+  border-top: 200px solid #706966;
+  border-left: 200px solid transparent;
+  right: -17px;
+  top: -17px;
 }
 
 @media (max-width: 992px) {

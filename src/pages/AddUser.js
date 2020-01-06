@@ -36,7 +36,7 @@ const AddUser = p => {
       <div className="content gray-bg pdtb-100">
         <div className="container">
           <form
-            className="row maxw-500"
+            className="row maxw-500 corner-bottom-right corner-top-left"
             action="javascript:simpleCart.checkout()"
             onSubmit={handleSubmit}
           >
@@ -132,7 +132,9 @@ const AddUser = p => {
                 >
                   <option value="">Department</option>
                   <option value="Warehouse">Warehouse</option>
-                  <option value="RepairWarranties">Repairs &amp; Warranties</option>
+                  <option value="RepairWarranties">
+                    Repairs &amp; Warranties
+                  </option>
                   <option value="Inventory">Inventory</option>
                   <option value="Process Control">Process Control</option>
                 </select>
