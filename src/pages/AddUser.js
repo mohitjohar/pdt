@@ -33,7 +33,7 @@ const AddUser = p => {
   return (
     <>
       <Header props={p} />
-      <div className="content pdtb-100">
+      <div className="content pdtb-50">
         <div className="container">
           <form
             className="row maxw-500 corner-top-right corner-bottom-left"
@@ -42,7 +42,8 @@ const AddUser = p => {
           >
             <div className="col-12">
               <h4 className="text-center text-dark font-weight-normal">
-                Add User
+                <i className="fa fa-user-plus" />
+                &nbsp;Add User
               </h4>
             </div>
             <div className="col-12 col-xs-12">
@@ -188,7 +189,7 @@ const AddUser = p => {
               </div>
             </div>
             <div className="col-12 text-right">
-              <input type="submit" className="btn btn-primary mt-3" />
+              <input type="submit" className="btn btn-primary" />
             </div>
           </form>
         </div>

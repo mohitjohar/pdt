@@ -47,6 +47,10 @@ h5.markern:before {
   padding: 8px 15px;
   border-bottom: 1px solid #fff;
 }
+.detail-list .d-flex {
+  box-shadow: 0px 2px 7px 2px #00000038;
+  margin-bottom: 12px;
+}
 .detail-list > .d-flex > strong.w-100 {
   font-weight: bold;
   width: 40% !important;
@@ -156,6 +160,13 @@ table.list-table th {
   font-size: 15px;
   background-color: #000000;
   text-transform: uppercase;
+  color: #fff;
+}
+table.list-table tr:hover {
+  background-color: #0083c8;
+  color: #fff;
+}
+table.list-table tr:hover td a {
   color: #fff;
 }
 img[alt='engine-icon'] {
@@ -560,7 +571,6 @@ h5.modal-title {
 
 .modal-body .detail-list > .d-flex > strong.w-100 {
   width: 200px !important;
-  color: #0083c8;
   position: relative;
 }
 .modal-body .detail-list > .d-flex > strong.w-100::before {
@@ -568,9 +578,6 @@ h5.modal-title {
   position: absolute;
   right: 0;
   top: 9px;
-}
-.modal-body .detail-list > .d-flex > .w-100 {
-  border-color: #0083c8;
 }
 
 .footer2 a {
@@ -711,12 +718,17 @@ form.maxw-500 {
 }
 
 form.maxw-500 label {
-  color: #000;
+  color: #343a40;
 }
 
 .pdtb-100 {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.pdtb-50 {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .corner-bottom-right,
@@ -728,8 +740,8 @@ form.maxw-500 label {
 .corner-bottom-right::after {
   content: '';
   position: absolute;
-  border-bottom: 100px solid #0083c8;
-  border-left: 100px solid transparent;
+  border-bottom: 200px solid #0083c8;
+  border-left: 200px solid transparent;
   bottom: -15px;
   right: -15px;
   z-index: -1;
@@ -738,8 +750,8 @@ form.maxw-500 label {
 .corner-top-left:before {
   content: '';
   position: absolute;
-  border-top: 100px solid #0083c8;
-  border-right: 100px solid transparent;
+  border-top: 200px solid #0083c8;
+  border-right: 200px solid transparent;
   left: -15px;
   top: -15px;
   z-index: -1;
@@ -748,8 +760,8 @@ form.maxw-500 label {
 .corner-top-right:before {
   content: '';
   position: absolute;
-  border-top: 100px solid #0083c8;
-  border-left: 100px solid transparent;
+  border-top: 200px solid #0083c8;
+  border-left: 200px solid transparent;
   right: -15px;
   top: -15px;
   z-index: -1;
@@ -758,8 +770,8 @@ form.maxw-500 label {
 .corner-bottom-left::after {
   content: '';
   position: absolute;
-  border-bottom: 100px solid #0083c8;
-  border-right: 100px solid transparent;
+  border-bottom: 200px solid #0083c8;
+  border-right: 200px solid transparent;
   left: -15px;
   bottom: -15px;
   z-index: -1;
@@ -807,7 +819,11 @@ form.maxw-500 label {
     z-index: 999;
   }
 }
-
+@media (max-width: 500px) {
+  form.maxw-500 {
+    margin: 0 15px;
+  }
+}
 @media (max-width: 767px) {
   footer.navbar.navbar-transparent {
     justify-content: center;
