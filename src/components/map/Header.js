@@ -1,71 +1,88 @@
 import React, { useState } from 'react';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  NavbarText
+} from 'reactstrap';
 import trackdimg from '../../img/trackd.png';
 import engineimg from '../../img/engine-icon.png';
 
 const Header = () => {
-  return (
-    <header className="map-header d-none d-lg-block">
-      <nav className="navbar justify-content-between">
-        <ul className="navbar-nav flex-row align-items-center">
-          <li className="nav-item">
-            <a href="#">
-              <img src={trackdimg} alt="trackd" />
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#">
-              <i className="fa fa-globe" />
-              &nbsp;&nbsp; Monitoring
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#">
-              <i className="fa fa-flag" /> &nbsp;&nbsp;Tracks
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#">
-              <i className="fa fa-comment" /> &nbsp;&nbsp;Reports
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#">
-              <i className="fa fa-street-view" /> &nbsp;&nbsp;Geofences
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#">
-              <i className="fa fa-clock-o" /> &nbsp;&nbsp;Notification
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#">
-              <i className="fa fa-user" /> Users
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#">
-              <img src={engineimg} alt="engine-icon" /> Units
-            </a>
-          </li>
-        </ul>
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => setIsOpen(!isOpen);
 
-        <ul className="navbar-nav flex-row align-items-center">
-          <li className="nav-item">
-            <a href="#">
-              <i className="fas fa-ruler-triangle" />
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#">
-              <i className="fa fa-ellipsis-v" aria-hidden="true" />
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#">Murray McC</a>
-          </li>
-        </ul>
-      </nav>
+  return (
+    <header className="map-header">
+      <Navbar color="transparent" dark expand="md">
+        <NavbarBrand href>
+          <img src={trackdimg} alt="trackd" />
+        </NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className="mr-auto" navbar>
+            <NavItem>
+              <NavLink href>
+                <i className="fa fa-globe" />
+                &nbsp;&nbsp; Monitoring
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href>
+                <i className="fa fa-flag" /> &nbsp;&nbsp;Tracks
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href>
+                <i className="fa fa-comment" /> &nbsp;&nbsp;Reports
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href>
+                <i className="fa fa-street-view" /> &nbsp;&nbsp;Geofences
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href>
+                <i className="fa fa-clock-o" /> &nbsp;&nbsp;Notification
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href>
+                <i className="fa fa-user" /> &nbsp;&nbsp;Users
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href>
+                <img src={engineimg} alt="engine-icon" /> Units
+              </NavLink>
+            </NavItem>
+          </Nav>
+          <Nav className="ml-auto" navbar>
+            <NavItem>
+              <NavLink href>
+                <i className="fas fa-ruler-triangle" />
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href>
+                <i className="fa fa-ellipsis-v" aria-hidden="true" />
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href>Murray McC</NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Navbar>
     </header>
   );
 };

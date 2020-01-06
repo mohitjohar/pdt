@@ -57,7 +57,7 @@ const AddUser = p => {
                 <input
                   type="text"
                   className={fname ? 'form-control' : 'form-control unfilled'}
-                  placeholder="First Name"
+                  // placeholder="First Name"
                   value={fname}
                   onChange={e => setFname(e.target.value)}
                   required
@@ -75,7 +75,7 @@ const AddUser = p => {
                 <input
                   type="text"
                   className={lname ? 'form-control' : 'form-control unfilled'}
-                  placeholder="Last Name"
+                  // placeholder="Last Name"
                   value={lname}
                   onChange={e => setLname(e.target.value)}
                   required
@@ -94,7 +94,7 @@ const AddUser = p => {
                   type="number"
                   className={phone ? 'form-control' : 'form-control unfilled'}
                   invalid={phonee ? 'true' : 'false'}
-                  placeholder="Phone"
+                  // placeholder="Phone"
                   value={phone}
                   onChange={e => setPhone(e.target.value)}
                   required
@@ -112,7 +112,7 @@ const AddUser = p => {
                 <input
                   type="email"
                   className={email ? 'form-control' : 'form-control unfilled'}
-                  placeholder="Email"
+                  // placeholder="Email"
                   value={email}
                   onChange={e => setEmail(e.target.value)}
                   required
@@ -129,7 +129,7 @@ const AddUser = p => {
                 </div>
                 <select
                   className="form-control"
-                  placeholder="Department"
+                  // placeholder="Department"
                   className={
                     department ? 'form-control' : 'form-control unfilled'
                   }
@@ -159,7 +159,7 @@ const AddUser = p => {
                   className={
                     employeeId ? 'form-control' : 'form-control unfilled'
                   }
-                  placeholder="Employee ID"
+                  // placeholder="Employee ID"
                   value={employeeId}
                   onChange={e => setEmployeeId(e.target.value)}
                   required
@@ -176,7 +176,7 @@ const AddUser = p => {
                 </div>
                 <select
                   className="form-control"
-                  placeholder="Role"
+                  // placeholder="Role"
                   onChange={e => setRole(e.target.value)}
                   className={role ? 'form-control' : 'form-control unfilled'}
                   required

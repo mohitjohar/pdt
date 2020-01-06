@@ -23,7 +23,7 @@ const AnyReactComponent2 = () => (
 );
 const AnyReactComponent3 = () => (
   <div>
-    <img src={mapmarkerblue} alt="map-marker" /><img src={mapmarkergreen} alt="map-marker" />
+    <img src={mapmarkerblue} alt="map-marker" />
   </div>
 );
 const AnyReactComponent4 = () => (
@@ -48,8 +48,8 @@ const AnyReactComponent7 = () => (
 );
 const AnyReactComponent8 = () => (
   <div>
-  <img src={mapmarker} alt="map-marker" />
-    <img src={mapmarkerpink} alt="map-marker" />
+    <img src={mapmarker} alt="map-marker" />
+    <img src={mapmarkerpink} alt="map-marker" className="mapmarker1" />
   </div>
 );
 const AnyReactComponent9 = () => (
@@ -67,6 +67,11 @@ const AnyReactComponent11 = () => (
     <img src={mapmarkerpurple} alt="map-marker" />
   </div>
 );
+const AnyReactComponentPca = () => (
+  <div>
+    <img src={mapmarker} alt="map-marker" />
+  </div>
+);
 
 const Map = p => {
   if (!localStorage.token) {
@@ -77,6 +82,10 @@ const Map = p => {
     lat: -25.2743988,
     lng: 133.7751312
   });
+
+  // PCA Toggle
+  const [isOpenPca, setIsOpenPca] = useState(false);
+  const togglePca = () => setIsOpenPca(!isOpenPca);
 
   // Parent Div
   const [isOpenP, setIsOpenP] = useState(true);
@@ -108,9 +117,9 @@ const Map = p => {
     setAsset6(!value);
     setAsset7(!value);
     setAsset8(!value);
-	setAsset9(!value);
-	setAsset10(!value);
-	setAsset11(!value);
+    setAsset9(!value);
+    setAsset10(!value);
+    setAsset11(!value);
     setValue(!value);
   };
 
@@ -127,18 +136,25 @@ const Map = p => {
 
   const [data1, setData1] = useState([
     { id: 0, zoom: 5, lat: -25.2743988, lng: 133.7751312, name: 'australia' },
-    { id: 1, zoom: 10, lat: -23.141917, lng: 117.255475, name: 'WAIO' },
-    { id: 2, zoom: 10, lat: -31.250117, lng: 120.041039, name: 'WAIO' },
-    { id: 3, zoom: 10, lat: -32.444627, lng: 115.998070, name: 'WAIO & NEC' },
+    { id: 1, zoom: 10, lat: -31.951241, lng: 115.863996, name: 'WAIO' },
+    { id: 2, zoom: 10, lat: -23.353845, lng: 119.740274, name: 'WAIO' },
+    { id: 3, zoom: 10, lat: -31.949648, lng: 115.85977, name: 'WAIO & NEC' },
     { id: 4, zoom: 10, lat: -33.641996, lng: 137.849633, name: 'OD' },
-    { id: 5, zoom: 10, lat: -36.837070, lng: 144.620740, name: 'OD' },
+    { id: 5, zoom: 10, lat: -36.83707, lng: 144.62074, name: 'OD' },
     { id: 6, zoom: 10, lat: -39.126077, lng: 145.664197, name: 'asset6' },
-    { id: 7, zoom: 10, lat: -31.815533, lng: 151.087914, name: 'NEC' },
-    { id: 8, zoom: 10, lat: -27.576190, lng: 152.209008, name: 'BMA & BMC' },
-    { id: 9, zoom: 10, lat: -23.291530, lng: 149.572289, name: 'BMA' },
-    { id: 10, zoom: 10, lat: -20.848260, lng: 148.517602, name: 'BMC' },
-	{ id: 11, zoom: 10, lat: -22.141917, lng: 113.255475, name: 'asset11'}
+    { id: 7, zoom: 10, lat: -32.285261, lng: 150.90002, name: 'NEC' },
+    { id: 8, zoom: 10, lat: -27.465972, lng: 153.024744, name: 'BMA & BMC' },
+    { id: 9, zoom: 10, lat: -23.522125, lng: 148.797829, name: 'BMA' },
+    { id: 10, zoom: 10, lat: -20.84826, lng: 148.517602, name: 'BMC' },
+    { id: 11, zoom: 10, lat: -21.931872, lng: 114.123756, name: 'asset11' }
   ]);
+
+  const pcaData = {
+    zoom: 10,
+    lat: -22.141917,
+    lng: 113.255475,
+    name: 'PCA'
+  };
 
   const setMap = e => {
     setZoom(e.zoom);
@@ -644,7 +660,7 @@ const Map = p => {
                       </a>
                     </div>
                   </div>
-				  {/* Asset 11 */}
+                  {/* Asset 11 */}
                   <div className="d-flex align-items-center map-fliter fliter3 justify-content-between">
                     <div className="d-inline-flex align-items-center">
                       <a href="#" className="nav-link">
@@ -682,6 +698,39 @@ const Map = p => {
                   </div>
                 </Collapse>
               </Collapse>
+              <div className="d-flex align-items-center map-fliter filtera justify-content-between">
+                <div className="d-inline-flex align-items-center">
+                  {/* <a href="#" className="nav-link">
+                    <input
+                      type="checkbox"
+                      className="minus"
+                      onClick={toggleP}
+                      checked={isOpenP}
+                    />
+                  </a> */}
+                  <a href="#" className="nav-link">
+                    <input
+                      type="checkbox"
+                      onClick={togglePca}
+                      checked={isOpenPca}
+                    />
+                  </a>
+                  <a href="#" className="nav-link">
+                    PCA
+                  </a>
+                </div>
+                <div className="d-inline-flex align-items-center">
+                  <a href="#" className="nav-link">
+                    <i
+                      className="fa fa-crosshairs"
+                      onClick={() => setMap(pcaData)}
+                    />
+                  </a>
+                  <a href="#" className="nav-link">
+                    <i className="fa fa-times" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
           <div className="col-md-10 p-0">
@@ -690,7 +739,7 @@ const Map = p => {
               className="mobimap"
             >
               <GoogleMapReact
-                options={function (maps) {
+                options={function(maps) {
                   return { mapTypeId: 'hybrid' };
                 }}
                 center={center}
@@ -727,10 +776,25 @@ const Map = p => {
                   <AnyReactComponent9 lat={data1[9].lat} lng={data1[9].lng} />
                 )}
                 {asset10 && (
-                  <AnyReactComponent10 lat={data1[10].lat} lng={data1[10].lng} />
+                  <AnyReactComponent10
+                    lat={data1[10].lat}
+                    lng={data1[10].lng}
+                  />
                 )}
-				{asset11 && (
-                  <AnyReactComponent11 lat={data1[11].lat} lng={data1[11].lng} />
+                {asset11 && (
+                  <AnyReactComponent11
+                    lat={data1[11].lat}
+                    lng={data1[11].lng}
+                  />
+                )}
+                {isOpenPca && (
+                  <AnyReactComponentPca lat={data1[7].lat} lng={data1[7].lng} />
+                )}
+                {isOpenPca && (
+                  <AnyReactComponentPca lat={data1[8].lat} lng={data1[8].lng} />
+                )}
+                {isOpenPca && (
+                  <AnyReactComponentPca lat={data1[9].lat} lng={data1[9].lng} />
                 )}
               </GoogleMapReact>
             </div>

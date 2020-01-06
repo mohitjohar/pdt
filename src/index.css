@@ -13,6 +13,7 @@ h6,
   font-weight: 300;
   line-height: 1.5em;
 }
+
 body {
   background-color: #eee;
   color: #3c4858;
@@ -42,6 +43,30 @@ h5.markern:before {
   transform: translateX(-50%);
   background-color: #ff00009c;
 }
+.navbarc .navbar-toggler .navbar-toggler-icon {
+  position: relative;
+  margin: 9px 0 !important;
+}
+.navbarc .navbar-toggler .navbar-toggler-icon:before,
+.navbarc .navbar-toggler .navbar-toggler-icon:after {
+  position: absolute;
+  content: '';
+  all: inherit;
+  width: 22px;
+  height: 2px;
+  vertical-align: middle;
+  outline: 0;
+  display: block;
+  margin: 3px 0;
+  background-color: #fff;
+  border-radius: 1px;
+}
+.navbarc .navbar-toggler .navbar-toggler-icon:before {
+  top: -6px;
+}
+.navbarc .navbar-toggler .navbar-toggler-icon::after {
+  bottom: -0.7px;
+}
 
 .detail-list > .d-flex > .w-100 {
   padding: 8px 15px;
@@ -50,12 +75,17 @@ h5.markern:before {
 .detail-list .d-flex {
   box-shadow: 0px 2px 7px 2px #00000038;
   margin-bottom: 12px;
+  border-radius: 3px;
 }
 .detail-list > .d-flex > strong.w-100 {
   font-weight: bold;
   width: 40% !important;
   text-transform: capitalize;
 }
+.filter-area label {
+  display: block;
+}
+
 img[alt='attachmentIcon'] {
   max-width: 16px;
   margin-right: 10px;
@@ -64,30 +94,28 @@ img.inspectionimg {
   max-height: 200px;
   margin-bottom: 15px;
 }
-th,
-td {
+.list-table th,
+.list-table td {
   padding: 12px 13px;
   font-size: 14px;
   border-right: 1px solid #ddd;
   position: relative;
 }
-
-td a {
+.list-table td > a {
   color: #3c4858;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
-tr:nth-child(even) {
+.list-table tr:nth-child(even) {
   background-color: #f2f2f2;
 }
-tr {
+.list-table tr {
   border: 1px solid #ddd;
   background-color: #fff;
-}
-th > i {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 10px;
-  margin-top: -2px;
 }
 img[alt='carsIcon'] {
   width: 19px;
@@ -99,7 +127,11 @@ th.equipment {
   min-width: 170px;
 }
 th.prioritisation {
-  min-width: 320px;
+  min-width: 70px;
+}
+th.prioritisation i.fa {
+  position: absolute;
+  right: 10px;
 }
 th.inspection,
 th.document {
@@ -113,7 +145,9 @@ th.equipmentid {
   margin: 0 -15px;
   max-height: 433px;
 }
-
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+}
 .nav-link.dropdown-toggle {
   padding: 10px !important;
   font-weight: 600;
@@ -136,6 +170,9 @@ h5.markern1 {
 header.map-header a {
   color: #fff;
   font-weight: bold;
+}
+header.map-header a.navbar-brand {
+  margin: 0px;
 }
 img[alt='trackd'] {
   max-width: 49px;
@@ -169,6 +206,10 @@ table.list-table tr:hover {
 table.list-table tr:hover td a {
   color: #fff;
 }
+table.list-table tr:hover td img {
+  filter: brightness(0) invert(1);
+}
+
 img[alt='engine-icon'] {
   max-width: 27px;
   filter: brightness(0) invert(1);
@@ -368,8 +409,23 @@ input[invalid='true'] {
 }
 
 input.form-control.unfilled,
-select.form-control.unfilled {
+select.form-control.unfilled,
+textarea.form-control.unfilled {
   background-image: none !important;
+}
+textarea.form-control {
+  min-height: 100px;
+}
+.actionModal {
+  border-radius: 4px;
+}
+.actionModal .form-control {
+  background-color: #e8e8e8;
+  border-radius: 0;
+}
+.actionModal .form-control:hover,
+.actionModal .form-control:focus {
+  background-color: #e0e4e6;
 }
 
 .form-check .form-check-label {
@@ -668,7 +724,7 @@ text.current-value {
 }
 
 .modal-dialog {
-  margin: 9.75rem auto;
+  margin: 6.75rem auto;
 }
 
 div#dropdownMenuButtonm {
@@ -776,6 +832,30 @@ form.maxw-500 label {
   bottom: -15px;
   z-index: -1;
 }
+
+img.mapmarker1 {
+  position: relative;
+  top: -20px;
+  left: -7px;
+}
+
+/* Date Picker */
+.CalendarDay__selected_span {
+  background: #0083c8 !important;
+  border: 1px double #0083c8 !important;
+}
+.CalendarDay__selected,
+.CalendarDay__selected:active,
+.CalendarDay__selected:hover {
+  background: #0083c8 !important;
+  border: 1px double #0083c8 !important;
+}
+@media (min-width: 992px) {
+  .DateRangePicker_picker__directionLeft {
+    left: initial !important;
+    right: 0;
+  }
+}
 @media (max-width: 992px) {
   .row.align-items-center.mb-50 {
     margin-bottom: 135px;
@@ -819,12 +899,20 @@ form.maxw-500 label {
     z-index: 999;
   }
 }
+@media (max-width: 360px) {
+  .DateInput {
+    width: 103px !important;
+  }
+}
 @media (max-width: 500px) {
   form.maxw-500 {
     margin: 0 15px;
   }
 }
 @media (max-width: 767px) {
+  header.map-header a {
+    text-align: center;
+  }
   footer.navbar.navbar-transparent {
     justify-content: center;
   }

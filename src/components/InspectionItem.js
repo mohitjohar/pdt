@@ -5,7 +5,6 @@ import AtachmentIcon from '../img/attachment.png';
 const InspectionItem = ({ item, i }) => {
   const [modal, setModal] = useState(false);
   const toggle = () => setModal(!modal);
-  const className = 'Model';
   return (
     <>
       <tr>
@@ -21,32 +20,37 @@ const InspectionItem = ({ item, i }) => {
         <td onClick={toggle} style={{ cursor: 'pointer' }} title="Click here">
           {item.Equipment}
         </td>
+        <td onClick={toggle} style={{ cursor: 'pointer' }} title="Click here">
+          {item.Manufacturer}
+        </td>
         <td>{item.Status}</td>
         <td>
-          <a href={item.ReportL} target="new" title="download PDF">
-            <img src={AtachmentIcon} alt="attachmentIcon" />
-            {item.Report}
-          </a>
+          <a href={item.ReportL} target="new" title="download PDF" />
+          <img src={AtachmentIcon} alt="attachmentIcon" />
+          {item.Report}
         </td>
         <td>
-          <a href={item.DocumentL} target="new" title="download PDF">
-            <img src={AtachmentIcon} alt="attachmentIcon" />
-            {item.Document}
-          </a>
+          <a href={item.DocumentL} target="new" title="download PDF" />
+          <img src={AtachmentIcon} alt="attachmentIcon" />
+          {item.Document}
         </td>
         <td>{item.Prioritisation}</td>
       </tr>
+
+      {/* Inspection Detail Model */}
       <InspectionModal
         Date={item.Date}
         SiteAbb={item.SiteAbb}
         Equipment={item.Equipment}
+        EquipmentID={item.EquipmentID}
+        Manufacturer={item.Manufacturer}
         Status={item.Status}
         Report={item.Report}
         ReportL={item.ReportL}
         Document={item.Document}
         DocumentL={item.DocumentL}
         Prioritisation={item.Prioritisation}
-        className={className + i}
+        id={`modal${i + 1}`}
         modal={modal}
         toggle={toggle}
       />

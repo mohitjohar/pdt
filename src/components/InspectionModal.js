@@ -1,15 +1,24 @@
-import React from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import React, { useState } from 'react';
+import {
+  Button,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Input
+} from 'reactstrap';
 import AtachmentIcon from '../img/attachment.png';
 
 const InspectionModal = item => {
+  const [name, setName] = useState('');
+  const [reason, setReason] = useState('');
+  const [modal, setModal] = useState(false);
+  const toggle = () => setModal(!modal);
+
   return (
     <>
-      <Modal
-        isOpen={item.modal}
-        toggle={item.toggle}
-        className={item.className}
-      >
+      {/* Inspection Detail Modal */}
+      <Modal isOpen={item.modal} toggle={item.toggle} id={item.id}>
         <ModalHeader toggle={item.toggle}>Inspection Detail</ModalHeader>
         <ModalBody>
           <div className="detail-list">
@@ -22,8 +31,16 @@ const InspectionModal = item => {
               <div className="w-100">{item.SiteAbb}</div>
             </div>
             <div className="d-flex justify-content-center">
+              <strong className="w-100">Equipment id</strong>
+              <div className="w-100">{item.EquipmentID}</div>
+            </div>
+            <div className="d-flex justify-content-center">
               <strong className="w-100">Equipment Name</strong>
               <div className="w-100">{item.Equipment}</div>
+            </div>
+            <div className="d-flex justify-content-center">
+              <strong className="w-100">Manufacturer</strong>
+              <div className="w-100">{item.Manufacturer}</div>
             </div>
             <div className="d-flex justify-content-center">
               <strong className="w-100">Status</strong>
@@ -48,16 +65,47 @@ const InspectionModal = item => {
               </div>
             </div>
             <div className="d-flex justify-content-center">
-              <strong className="w-100">Prioritisation Of Corrective Action</strong>
-              <div className="w-100">
-                {item.Prioritisation}
-              </div>
+              <strong className="w-100">
+                Prioritisation Of Corrective Action
+              </strong>
+              <div className="w-100">{item.Prioritisation}</div>
             </div>
           </div>
         </ModalBody>
-        <ModalFooter>
+        <ModalFooter className="justify-content-between">
+          <Button color="danger" onClick={toggle}>
+            Take Action
+          </Button>
           <Button color="secondary" onClick={item.toggle}>
             Cancel
+          </Button>
+        </ModalFooter>
+      </Modal>
+
+      {/* Take Action Modal */}
+      <Modal isOpen={modal} toggle={toggle} className="actionModal">
+        <ModalHeader toggle={toggle}>Action</ModalHeader>
+        <ModalBody>
+          <label>Name</label>
+          <Input
+            type="text"
+            className={name ? 'mb-3' : 'unfilled mb-3'}
+            value={name}
+            onChange={e => setName(e.target.value)}
+            required
+          />
+          <label>Reason for action</label>
+          <Input
+            type="textarea"
+            className={reason ? '' : 'unfilled'}
+            value={reason}
+            onChange={e => setReason(e.target.value)}
+            required
+          />
+        </ModalBody>
+        <ModalFooter>
+          <Button color="primary" onClick={toggle}>
+            Submit
           </Button>
         </ModalFooter>
       </Modal>
