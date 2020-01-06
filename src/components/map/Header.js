@@ -26,8 +26,14 @@ const Header = () => {
         <NavbarBrand href>
           <img src={trackdimg} alt="trackd" />
         </NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
+        {/* <NavbarToggler /> */}
+        <button className="navbar-toggler pull-left" onClick={toggle}>
+          <span className="sr-only">Toggle navigation</span>
+          <span className="navbar-toggler-icon icon-bar" />
+          <span className="navbar-toggler-icon icon-bar" />
+          <span className="navbar-toggler-icon icon-bar" />
+        </button>
+        <Collapse isOpen={isOpen} navbar className="mobi-nav">
           <Nav className="mr-auto" navbar>
             <NavItem>
               <NavLink href>

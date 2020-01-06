@@ -152,7 +152,24 @@ th.equipmentid {
   padding: 10px !important;
   font-weight: 600;
 }
+.nav-link {
+  cursor: pointer;
+}
+.mobi-nav {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  left: 0;
+  top: 86px;
+  z-index: 999;
+}
+.mobi-nav a {
+  color: #5c5c5c !important;
+}
 
+.mobi-nav a img {
+  filter: grayscale(100%);
+}
 .min-height-500 {
   min-height: 500px;
 }
