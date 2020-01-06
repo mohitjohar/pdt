@@ -705,10 +705,14 @@ form.maxw-500 > div {
 form.maxw-500 {
   max-width: 500px;
   margin: auto;
-  background-color: #e3e6e9;
+  background-color: #dfdfe0;
   padding: 15px;
   border-radius: 3px;
   box-shadow: 0 0 7px 1px #00000021;
+}
+
+form.maxw-500 label {
+  color: #000;
 }
 
 .pdtb-100 {

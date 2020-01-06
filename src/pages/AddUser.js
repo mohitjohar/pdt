@@ -33,7 +33,7 @@ const AddUser = p => {
   return (
     <>
       <Header props={p} />
-      <div className="content gray-bg pdtb-100">
+      <div className="content pdtb-100">
         <div className="container">
           <form
             className="row maxw-500 corner-top-right corner-bottom-left"
@@ -41,12 +41,13 @@ const AddUser = p => {
             onSubmit={handleSubmit}
           >
             <div className="col-12">
-              <h4 className="text-center text-primary font-weight-normal">
+              <h4 className="text-center text-dark font-weight-normal">
                 Add User
               </h4>
             </div>
             <div className="col-12 col-xs-12">
-              <div className="input-group mb-2">
+              <label>First Name</label>
+              <div className="input-group mb-3">
                 <div className="input-group-prepend">
                   <span className="input-group-text">
                     <i className="fa fa-user" />
@@ -63,7 +64,8 @@ const AddUser = p => {
               </div>
             </div>
             <div className="col-12 col-xs-12">
-              <div className="input-group mb-2">
+              <label>Last Name</label>
+              <div className="input-group mb-3">
                 <div className="input-group-prepend">
                   <span className="input-group-text">
                     <i className="fa fa-user" />
@@ -80,7 +82,8 @@ const AddUser = p => {
               </div>
             </div>
             <div className="col-12 col-xs-12">
-              <div className="input-group mb-2">
+              <label>Phone Number</label>
+              <div className="input-group mb-3">
                 <div className="input-group-prepend">
                   <span className="input-group-text">
                     <i className="fa fa-phone" />
@@ -98,7 +101,8 @@ const AddUser = p => {
               </div>
             </div>
             <div className="col-12 col-xs-12">
-              <div className="input-group mb-2">
+              <label>Email</label>
+              <div className="input-group mb-3">
                 <div className="input-group-prepend">
                   <span className="input-group-text">
                     <i className="fa fa-envelope" />
@@ -115,7 +119,8 @@ const AddUser = p => {
               </div>
             </div>
             <div className="col-12 col-xs-12">
-              <div className="input-group mb-2">
+              <label>Department</label>
+              <div className="input-group mb-3">
                 <div className="input-group-prepend">
                   <span className="input-group-text">
                     <i className="fa fa-building" />
@@ -141,7 +146,8 @@ const AddUser = p => {
               </div>
             </div>
             <div className="col-12 col-xs-12">
-              <div className="input-group mb-2">
+              <label>Employee Id</label>
+              <div className="input-group mb-3">
                 <div className="input-group-prepend">
                   <span className="input-group-text">
                     <i className="fa fa-id-card" />
@@ -160,7 +166,8 @@ const AddUser = p => {
               </div>
             </div>
             <div className="col-12 col-xs-12">
-              <div className="input-group mb-2">
+              <label>Role</label>
+              <div className="input-group mb-3">
                 <div className="input-group-prepend">
                   <span className="input-group-text">
                     <i className="fa fa-user-circle" />

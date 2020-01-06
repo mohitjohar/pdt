@@ -20,7 +20,6 @@ const Inspection = [
     Document: 'JRA_JHA J1589-01-00',
     DocumentL: Pdf,
     Prioritisation: 10
-
   },
   {
     Date: '01/05/20',
@@ -392,7 +391,7 @@ const Inspections = p => {
   );
 
   return (
-    <div className="page bg-gray">
+    <div className="page">
       <Header props={p} />
       <div className="content min-height-500 pt-3">
         <div className="container">
@@ -478,7 +477,9 @@ const Inspections = p => {
                     <th className="status">Status</th>
                     <th className="inspection">Inspection Report</th>
                     <th className="document">Risk Document</th>
-                    <th className="prioritisation">Prioritisation of Corrective Action</th>
+                    <th className="prioritisation">
+                      Prioritisation of Corrective Action
+                    </th>
                   </tr>
 
                   {Inspection.map((item, i) => {
