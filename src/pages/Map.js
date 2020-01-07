@@ -163,18 +163,16 @@ const Map = p => {
       lng: e.lng
     });
 
-    if (e.name === 'australia') {
+    if (e.id === 1) {
       setAsset1(true);
-    } else if (e.id === 1) {
-      setAsset2(true);
     } else if (e.id === 2) {
-      setAsset3(true);
+      setAsset2(true);
     } else if (e.id === 3) {
-      setAsset4(true);
+      setAsset3(true);
     } else if (e.id === 4) {
-      setAsset5(true);
+      setAsset4(true);
     } else if (e.id === 5) {
-      setAsset6(true);
+      setAsset5(true);
     } else if (e.id === 6) {
       setAsset6(true);
     } else if (e.id === 7) {
@@ -189,12 +187,6 @@ const Map = p => {
       setAsset11(true);
     }
   };
-
-  const AnyReactComponent = ({ text }) => (
-    <div>
-      <img src={mapmarker} alt="map-marker" />
-    </div>
-  );
 
   // const AnyReactComponent3 = () => <h5 className="markern1">Omni-tuff QLD</h5>;
   console.log('center ', center, 'Zoom', zoom);
