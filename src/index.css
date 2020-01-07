@@ -915,6 +915,7 @@ img.mapmarker1 {
   .DateRangePicker_picker__directionLeft {
     left: 15px !important;
     width: 100% !important;
+    min-width: 330px;
     display: block;
     max-width: 100% !important;
     overflow: auto;
