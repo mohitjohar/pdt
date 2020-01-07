@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-// get our fontawesome imports
 
 const AddUser = p => {
   const [fname, setFname] = useState('');

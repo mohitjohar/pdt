@@ -399,6 +399,8 @@ const Inspections = p => {
   });
   const [focusedInput, setFocusedInput] = useState(null);
 
+  console.log('focusedInput : ', focusedInput, 'setSearchDate : ', searchDate);
+
   return (
     <div className="page">
       <Header props={p} />

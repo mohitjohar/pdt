@@ -13,11 +13,6 @@ const Login = p => {
   const [remember, setRemember] = useState('');
 
   const handleSubmit = () => {
-    // if (!remember) {
-    //   alert('Please Fill out Remember field');
-    //   return false;
-    // }
-
     const url = 'https://reqres.in/api/login';
     const data = {
       email: 'eve.holt@reqres.in',
@@ -85,7 +80,9 @@ const Login = p => {
                         name="email"
                         value={email}
                         onChange={e => setEmail(e.target.value)}
-                        className={email ? 'form-control' : 'form-control unfilled'}
+                        className={
+                          email ? 'form-control' : 'form-control unfilled'
+                        }
                         placeholder="Email..."
                         required
                       />
@@ -102,7 +99,9 @@ const Login = p => {
                         type="password"
                         name="password"
                         id="password"
-                        className={password ? 'form-control' : 'form-control unfilled'}
+                        className={
+                          password ? 'form-control' : 'form-control unfilled'
+                        }
                         placeholder="Password..."
                         value={password}
                         onChange={e => setPassword(e.target.value)}

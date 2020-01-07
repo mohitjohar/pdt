@@ -31,12 +31,12 @@ const Header = ({ props }) => {
             </ul>
             <ul className="navbar-nav right-side">
               <li className="nav-item">
-                <Link to="#">
+                <Link to>
                   <i className="fa fa-clock-o" />
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="#">
+                <Link to>
                   <i className="fa fa-star" />
                 </Link>
               </li>
@@ -58,11 +58,11 @@ const Header = ({ props }) => {
                 </DropdownToggle>
 
                 <DropdownMenu id="dropdownMenuButton">
-                  <Link to="#">
+                  <Link to>
                     <i className="fa fa-user" />
                     &nbsp;&nbsp; Profile
                   </Link>
-                  <Link to="#">
+                  <Link to>
                     <i className="fa fa-cog" />
                     &nbsp;&nbsp; Settings
                   </Link>
@@ -81,7 +81,11 @@ const Header = ({ props }) => {
         </nav>
         <nav className="navbar navbar-expand-lg mb-0 bg-blackt">
           <div className="container">
-            <button className="navbar-toggler pull-left" onClick={toggle2}>
+            <button
+              className="navbar-toggler pull-left"
+              onClick={toggle2}
+              type="button"
+            >
               <span className="sr-only">Toggle navigation</span>
               <span className="navbar-toggler-icon icon-bar" />
               <span className="navbar-toggler-icon icon-bar" />
@@ -97,25 +101,25 @@ const Header = ({ props }) => {
                 caret
                 className="btn btn-transparent text-white nav-link"
               >
-                <i className="fa fa-user" /> &nbsp;&nbsp; Murray McC
+                <i className="fa fa-user" /> &nbsp; Murray McC
               </DropdownToggle>
 
               <DropdownMenu id="dropdownMenuButtonm">
-                <Link to="#">
+                <Link to>
                   <i className="fa fa-user" />
-                  &nbsp;&nbsp; Profile
+                  &nbsp; Profile
                 </Link>
-                <Link to="#">
+                <Link to>
                   <i className="fa fa-cog" />
-                  &nbsp;&nbsp; Settings
+                  &nbsp;Settings
                 </Link>
                 <Link to="/adduser">
                   <i className="fa fa-user-plus" />
-                  &nbsp;&nbsp; Add User
+                  &nbsp;Add User
                 </Link>
                 <Link to="/logout">
                   <i className="fa fa-sign-out" aria-hidden="true" />
-                  &nbsp;&nbsp; Logout
+                  &nbsp; Logout
                 </Link>
               </DropdownMenu>
             </Dropdown>
@@ -133,19 +137,19 @@ const Header = ({ props }) => {
                   <Link to="/map">Site Info</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="#">Reports</Link>
+                  <Link to>Reports</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="#">Analytics</Link>
+                  <Link to>Analytics</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="#">
+                  <Link to>
                     Support &nbsp;&nbsp;
                     <i className="fa fa-phone" />
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="#">
+                  <Link to>
                     feedback &nbsp;&nbsp; <i className="fa fa-comment" />
                   </Link>
                 </li>

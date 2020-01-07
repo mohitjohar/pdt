@@ -2,16 +2,10 @@ import React, { useState } from 'react';
 import {
   Collapse,
   Navbar,
-  NavbarToggler,
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
+  NavLink
 } from 'reactstrap';
 import trackdimg from '../../img/trackd.png';
 import engineimg from '../../img/engine-icon.png';
@@ -27,7 +21,7 @@ const Header = () => {
           <img src={trackdimg} alt="trackd" />
         </NavbarBrand>
         {/* <NavbarToggler /> */}
-        <button className="navbar-toggler d-md" onClick={toggle}>
+        <button className="navbar-toggler d-md" onClick={toggle} type="button">
           <span className="sr-only">Toggle navigation</span>
           <span className="navbar-toggler-icon icon-bar" />
           <span className="navbar-toggler-icon icon-bar" />
@@ -38,32 +32,32 @@ const Header = () => {
             <NavItem>
               <NavLink href>
                 <i className="fa fa-globe" />
-                &nbsp;&nbsp; Monitoring
+                &nbsp; Monitoring
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink href>
-                <i className="fa fa-flag" /> &nbsp;&nbsp;Tracks
+                <i className="fa fa-flag" /> &nbsp;Tracks
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink href>
-                <i className="fa fa-comment" /> &nbsp;&nbsp;Reports
+                <i className="fa fa-comment" /> &nbsp;Reports
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink href>
-                <i className="fa fa-street-view" /> &nbsp;&nbsp;Geofences
+                <i className="fa fa-street-view" /> &nbsp;Geofences
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink href>
-                <i className="fa fa-clock-o" /> &nbsp;&nbsp;Notification
+                <i className="fa fa-clock-o" /> &nbsp;Notification
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink href>
-                <i className="fa fa-user" /> &nbsp;&nbsp;Users
+                <i className="fa fa-user" /> &nbsp;Users
               </NavLink>
             </NavItem>
             <NavItem>
