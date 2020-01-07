@@ -75,7 +75,7 @@ const Header = () => {
           <Nav className="ml-auto" navbar>
             <NavItem>
               <NavLink href>
-                <i className="fas fa-ruler-triangle" />
+                <i className="fa fa-exclamation-triangle" />
               </NavLink>
             </NavItem>
             <NavItem>
