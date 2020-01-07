@@ -150,10 +150,19 @@ const Map = p => {
   ]);
 
   const pcaData = {
-    zoom: 10,
-    lat: -22.141917,
-    lng: 113.255475,
+    zoom: 5,
+    lat: -27.465972,
+    lng: 153.024744,
     name: 'PCA'
+  };
+
+  const setMapPCA = e => {
+    setZoom(e.zoom);
+    setCenter({
+      lat: e.lat,
+      lng: e.lng
+    });
+    setIsOpenPca(true);
   };
 
   const setMap = e => {
@@ -707,15 +716,19 @@ const Map = p => {
                       checked={isOpenPca}
                     />
                   </a>
-                  <a href="#" className="nav-link">
+                  <a
+                    href
+                    className="nav-link"
+                    onClick={() => setMapPCA(pcaData)}
+                  >
                     PCA
                   </a>
                 </div>
                 <div className="d-inline-flex align-items-center">
-                  <a href="#" className="nav-link">
+                  <a href className="nav-link">
                     <i
                       className="fa fa-crosshairs"
-                      onClick={() => setMap(pcaData)}
+                      onClick={() => setMapPCA(pcaData)}
                     />
                   </a>
                   <a href="#" className="nav-link">
