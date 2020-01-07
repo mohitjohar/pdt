@@ -14,7 +14,10 @@ const InspectionModal = item => {
   const [reason, setReason] = useState('');
   const [modal, setModal] = useState(false);
   const toggle = () => setModal(!modal);
-
+  const handelSubmit = () => {
+    item.toggle();
+    setModal(!modal);
+  };
   return (
     <>
       {/* Inspection Detail Modal */}
@@ -111,7 +114,7 @@ const InspectionModal = item => {
           />
         </ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={toggle}>
+          <Button color="primary" onClick={handelSubmit}>
             Submit
           </Button>
         </ModalFooter>

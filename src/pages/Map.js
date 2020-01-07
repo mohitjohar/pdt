@@ -204,7 +204,7 @@ const Map = p => {
       <Header props={p} />
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-2 p-0 gray-bg">
+          <div className="col-lg-2 col-md-3 p-0 gray-bg">
             <div className="map-left-sidebar">
               <div className="d-flex align-item-center map-fliter">
                 <div className="nav-link w-100">
@@ -738,7 +738,7 @@ const Map = p => {
               </div>
             </div>
           </div>
-          <div className="col-md-10 p-0">
+          <div className="col-lg-10 col-md-9 p-0">
             <div
               style={{ height: '100vh', width: '100%', position: 'relative' }}
               className="mobimap"

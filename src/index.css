@@ -55,6 +55,9 @@ h5.markern:before {
   position: relative;
   margin: 9px 0 !important;
 }
+.modal-backdrop.show {
+  opacity: 0.7;
+}
 .navbarc .navbar-toggler .navbar-toggler-icon:before,
 .navbarc .navbar-toggler .navbar-toggler-icon:after {
   position: absolute;
@@ -134,6 +137,9 @@ th.site-abb,
 th.equipment {
   min-width: 170px;
 }
+th.site-abb {
+  min-width: 50px;
+}
 th.prioritisation {
   min-width: 70px;
 }
@@ -152,6 +158,20 @@ th.equipmentid {
   overflow: auto;
   margin: 0 -15px;
   max-height: 433px;
+}
+.overflow-auto-table::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.overflow-auto-table::-webkit-scrollbar-track {
+  background: #e9e9e9;
+}
+.overflow-auto-table::-webkit-scrollbar-thumb {
+  background: #0083c8;
+  border-radius: 10px;
+}
+.overflow-auto-table::-webkit-scrollbar-thumb:hover {
+  background: #1d90cc;
 }
 .navbar-dark .navbar-nav .nav-link {
   color: #fff;

@@ -27,7 +27,7 @@ const Header = () => {
           <img src={trackdimg} alt="trackd" />
         </NavbarBrand>
         {/* <NavbarToggler /> */}
-        <button className="navbar-toggler pull-left" onClick={toggle}>
+        <button className="navbar-toggler" onClick={toggle}>
           <span className="sr-only">Toggle navigation</span>
           <span className="navbar-toggler-icon icon-bar" />
           <span className="navbar-toggler-icon icon-bar" />
