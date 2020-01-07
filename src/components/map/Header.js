@@ -22,18 +22,18 @@ const Header = () => {
 
   return (
     <header className="map-header">
-      <Navbar color="transparent" dark expand="md">
+      <Navbar color="transparent" dark expand="sm">
         <NavbarBrand href>
           <img src={trackdimg} alt="trackd" />
         </NavbarBrand>
         {/* <NavbarToggler /> */}
-        <button className="navbar-toggler" onClick={toggle}>
+        <button className="navbar-toggler d-md" onClick={toggle}>
           <span className="sr-only">Toggle navigation</span>
           <span className="navbar-toggler-icon icon-bar" />
           <span className="navbar-toggler-icon icon-bar" />
           <span className="navbar-toggler-icon icon-bar" />
         </button>
-        <Collapse isOpen={isOpen} navbar className="mobi-nav">
+        <Collapse isOpen={isOpen} navbar className="mobi-nav d-md">
           <Nav className="mr-auto" navbar>
             <NavItem>
               <NavLink href>
