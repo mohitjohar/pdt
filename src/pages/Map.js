@@ -79,7 +79,13 @@ const Map1 = p => {
     { id: 8, zoom: 10, lat: -27.465972, lng: 153.024744, name: 'BMA & BMC' },
     { id: 9, zoom: 10, lat: -23.522125, lng: 148.797829, name: 'BMA' },
     { id: 10, zoom: 10, lat: -20.84826, lng: 148.517602, name: 'BMC' },
-    { id: 11, zoom: 10, lat: -21.931872, lng: 114.123756, name: 'asset11' }
+    {
+      id: 11,
+      zoom: 10,
+      lat: -21.931872,
+      lng: 114.1,
+      name: 'BHP Petroleum'
+    }
   ]);
 
   const pcaData = {

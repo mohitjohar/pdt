@@ -152,6 +152,7 @@ const Dashboard = p => {
                 <option value="2">NEC</option>
                 <option value="3">OD</option>
                 <option value="4">WAIO</option>
+                <option value="2">BHP Petroleum</option>
               </select>
             </div>
             <div className="row">
@@ -229,6 +230,7 @@ const Dashboard = p => {
                 <option value="2">NEC</option>
                 <option value="3">OD</option>
                 <option value="4">WAIO</option>
+                <option value="2">BHP Petroleum</option>
               </select>
             </div>
             <div className="row">
