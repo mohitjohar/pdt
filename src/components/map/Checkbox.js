@@ -40,7 +40,7 @@ const Checkbox = ({
         )}
 
         {/* All units checkbox */}
-        {value ? (
+        {setAllChange ? (
           <a href className="nav-link">
             <input type="checkbox" checked={value} onClick={setAllChange} />
           </a>
